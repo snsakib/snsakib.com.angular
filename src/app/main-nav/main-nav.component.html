@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Menu -->
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true" role="navigation" mode="push" opened="false">
+    <mat-toolbar>
+      <img src="../../assets/images/logo.svg" alt="Logo of Syed Nazmus Sakib" id="sidenav-logo">
+    </mat-toolbar>
+    <mat-nav-list>
+      <a *ngFor="let page of pages" mat-list-item routerLink="{{ page.routerLink }}" routerLinkActive="active">{{
+        page.linkText }}</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- Navbar -->
+    <mat-toolbar>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isLaptop ? false : true">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="/about">
+        <img src="../../assets/images/logo.svg" alt="Logo of Syed Nazmus Sakib" id="navbar-logo">
+      </a>
+      <mat-nav-list *ngIf="isLaptop">
+        <a *ngFor="let page of pages" mat-list-item routerLink="{{ page.routerLink }}" routerLinkActive="active">{{
+          page.linkText }}</a>
+      </mat-nav-list>
+    </mat-toolbar>
+    <!-- Pages -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

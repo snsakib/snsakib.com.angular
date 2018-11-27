@@ -1,0 +1,85 @@
+@import 'variables';
+@import 'mixins';
+@import 'helpers';
+
+:host {
+  @extend .host;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 2.5rem;
+
+  @include breakpointMin(tablet) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  @include breakpointMin(lg) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  @include breakpointMin(laptop) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.image {
+  // border: 1px solid red;
+  text-align: center;
+  // overflow: hidden;
+
+  #profile-picture {}
+
+  @include breakpointMin(lg) {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    padding: 0 2rem;
+  }
+
+}
+
+.about {
+  padding: 2rem 0;
+  line-height: 3.5rem;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: $primary-color;
+  }
+
+  .highlight {
+    color: $secondary-color;
+  }
+
+  p {
+    margin: 5rem 0;
+  }
+
+  a {
+    color: $primary-color;
+
+    &[mat-flat-button] {
+      @extend .flat-button;
+    }
+  }
+
+  i {
+    margin: 0 1rem;
+    font-size: 3rem;
+    color: $secondary-color;
+  }
+}

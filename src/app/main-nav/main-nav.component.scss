@@ -1,0 +1,100 @@
+@import 'variables';
+@import 'mixins';
+
+.sidenav-container {
+  height: 100%;
+
+  .sidenav {
+    width: 20rem;
+    background-color: $bg-color;
+
+    .mat-toolbar {
+      background-color: $bg-color;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+
+      #sidenav-logo {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+
+    mat-nav-list {
+      a {
+        color: $secondary-color;
+        font-size: 2rem;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+
+        &.active {
+          color: $primary-color;
+          border-top: 1px solid $primary-color;
+          border-bottom: 1px solid $primary-color;
+        }
+
+        &:hover {
+          color: $primary-color;
+          background-color: lighten($color: $bg-color, $amount: 5);
+        }
+      }
+    }
+  }
+
+  mat-sidenav-content {
+    mat-toolbar {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      height: $toolbar-height;
+      z-index: 1;
+      background-color: $bg-color;
+      color: $secondary-color;
+      padding: 0 2rem;
+
+      @include breakpointMin(tablet) {
+        padding: 0 5rem;
+      }
+
+      @include breakpointMin(laptop) {
+        padding: 0 10rem;
+      }
+
+      button {
+        margin-right: 2rem;
+      }
+
+      #navbar-logo {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      mat-nav-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 0;
+        margin-left: auto;
+
+        a {
+          color: $text-color;
+          font-size: 2rem;
+          border-bottom: 2px solid transparent;
+          -webkit-transition: all .5s ease-in-out;
+          transition: all .5s ease-in-out;
+
+          &.active {
+            color: $primary-color;
+            border-bottom: 2px solid $primary-color;
+          }
+
+          &:hover {
+            color: $primary-color;
+            background-color: lighten($color: $bg-color, $amount: 5);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@import 'variables';
+@import 'mixins';
+@import 'helpers';
+
+:host {
+  @extend .host;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 0 5rem 0;
+}
+
+.post {
+  max-width: 70rem;
+  padding: 1rem;
+  margin: 0 auto 3rem;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: lighten($color: $bg-color, $amount: 5);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+
+  h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+  }
+
+  p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    color: $text-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $primary-color;
+  }
+}

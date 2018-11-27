@@ -1,0 +1,8 @@
+<h1>Things I think you should know...</h1>
+<div class="post" *ngFor="let post of posts" routerLink="{{ post.routerLink }}">
+  <h1>{{ post.title }}</h1>
+  <p>
+    <span>{{ post.date }}</span>
+    <span>{{ post.timeToRead }} min read</span>
+  </p>
+</div>
