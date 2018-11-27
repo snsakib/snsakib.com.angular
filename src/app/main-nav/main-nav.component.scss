@@ -63,6 +63,12 @@
 
       button {
         margin-right: 2rem;
+        border: 1px solid red;
+        border-radius: 0;
+
+        img {
+          border: 1px solid red;
+        }
       }
 
       #navbar-logo {

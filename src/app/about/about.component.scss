@@ -36,11 +36,7 @@
 }
 
 .image {
-  // border: 1px solid red;
   text-align: center;
-  // overflow: hidden;
-
-  #profile-picture {}
 
   @include breakpointMin(lg) {
     -webkit-box-ordinal-group: 3;
@@ -77,9 +73,13 @@
     }
   }
 
-  i {
-    margin: 0 1rem;
-    font-size: 3rem;
-    color: $secondary-color;
+  .iconImg {
+    padding: 10px;
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+
+    &:hover {
+      background-color: lighten($color: $bg-color, $amount: 5);
+    }
   }
 }
