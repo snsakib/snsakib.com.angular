@@ -62,12 +62,14 @@
       }
 
       button {
+        background-color: $bg-color;
         margin-right: 2rem;
-        border: 1px solid red;
-        border-radius: 0;
+        border: none;
+        padding: 1rem;
 
-        img {
-          border: 1px solid red;
+        &:hover {
+          background-color: lighten($color: $bg-color, $amount: 5);
+          cursor: pointer;
         }
       }
 

@@ -12,14 +12,14 @@ export class MainNavComponent implements OnInit {
       routerLink: "/about",
       linkText: "About"
     },
-    {
-      routerLink: "/projects",
-      linkText: "Projects"
-    },
-    {
-      routerLink: "/blog",
-      linkText: "Blog"
-    },
+    // {
+    //   routerLink: "/projects",
+    //   linkText: "Projects"
+    // },
+    // {
+    //   routerLink: "/blog",
+    //   linkText: "Blog"
+    // },
     {
       routerLink: "/contact",
       linkText: "Contact"

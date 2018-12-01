@@ -15,36 +15,46 @@ export class ProjectsComponent implements OnInit {
     {
       projectTitle: "Project 1",
       category: "Website",
-      liveDemoLink: "#"
+      liveDemoLink: "#",
+      imagePath: "../../assets/images/profile picture 400.jpg",
+      alt: "thumbnail image"
     },
     {
       projectTitle: "Project 2",
       category: "App",
-      liveDemoLink: "#"
+      liveDemoLink: "#",
+      imagePath: "../../assets/images/profile picture 400.jpg",
+      alt: "thumbnail image"
     },
     {
       projectTitle: "Project 3",
       category: "Website",
-      liveDemoLink: "#"
+      liveDemoLink: "#",
+      imagePath: "../../assets/images/profile picture 400.jpg",
+      alt: "thumbnail image"
     },
     {
       projectTitle: "Project 4",
       category: "Data Visualization",
-      liveDemoLink: "#"
+      liveDemoLink: "#",
+      imagePath: "../../assets/images/profile picture 400.jpg",
+      alt: "thumbnail image"
     },
     {
       projectTitle: "Project 5",
       category: "Website",
-      liveDemoLink: "#"
+      liveDemoLink: "#",
+      imagePath: "../../assets/images/profile picture 400.jpg",
+      alt: "thumbnail image"
     }
   ];
 
   //Checks the screen width & sets the property value of 'colNum'
   @HostListener("window:resize")
   onWindowResize() {
-    if (window.innerWidth <= 576) {
+    if (window.innerWidth <= 500) {
       this.colNum = 1;
-    } else if (window.innerWidth > 576 && window.innerWidth < 1024) {
+    } else if (window.innerWidth > 500 && window.innerWidth < 920) {
       this.colNum = 2;
     } else {
       this.colNum = 3;

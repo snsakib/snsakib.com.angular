@@ -7,7 +7,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
   styleUrls: ["./about.component.scss"]
 })
 export class AboutComponent {
-  email: string = "hello@snsakib.com";
+  email: string = "contact@snsakib.com";
 
   openSnackBar() {
     this.snackBar.open("Opening e-mail app. Please wait!", "", {
