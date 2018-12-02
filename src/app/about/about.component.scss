@@ -52,13 +52,15 @@
   line-height: 3.5rem;
 
   h1 {
+    margin: 1rem 0;
     font-size: 3.5rem;
     font-weight: 400;
     color: $primary-color;
   }
 
   .highlight {
-    color: $secondary-color;
+    -webkit-text-decoration: $primary-color underline wavy;
+            text-decoration: $primary-color underline wavy;
   }
 
   p {
