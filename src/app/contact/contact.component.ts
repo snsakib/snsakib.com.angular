@@ -8,10 +8,12 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 })
 export class ContactComponent {
   openSnackBar() {
-    this.snackBar.open("Opening e-mail app. Please wait!", "", {
-      duration: 2000,
-      horizontalPosition: "end"
-    });
+    if (window.innerWidth >= 1024) {
+      this.snackBar.open("Opening e-mail app. Please wait!", "", {
+        duration: 2000,
+        horizontalPosition: "end"
+      });
+    }
   }
 
   constructor(public snackBar: MatSnackBar) {}

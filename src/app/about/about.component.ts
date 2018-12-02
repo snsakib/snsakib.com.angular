@@ -10,10 +10,12 @@ export class AboutComponent {
   email: string = "contact@snsakib.com";
 
   openSnackBar() {
-    this.snackBar.open("Opening e-mail app. Please wait!", "", {
-      duration: 2000,
-      horizontalPosition: "end"
-    });
+    if (window.innerWidth >= 1024) {
+      this.snackBar.open("Opening e-mail app. Please wait!", "", {
+        duration: 2000,
+        horizontalPosition: "end"
+      });
+    }
   }
 
   constructor(public snackBar: MatSnackBar) {}

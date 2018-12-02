@@ -65,12 +65,8 @@
         background-color: $bg-color;
         margin-right: 2rem;
         border: none;
-        padding: 1rem;
-
-        &:hover {
-          background-color: lighten($color: $bg-color, $amount: 5);
-          cursor: pointer;
-        }
+        height: 3.5rem;
+        width: 3.5rem;
       }
 
       #navbar-logo {

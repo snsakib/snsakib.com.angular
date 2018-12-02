@@ -15,8 +15,8 @@
       <button type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="isLaptop ? false : true">
         <img src="../../assets/images/menu.svg" alt="menu">
       </button>
-      <a routerLink="/about">
-        <img src="../../assets/images/logo.svg" alt="Logo of Syed Nazmus Sakib" id="navbar-logo">
+      <a routerLink="/about" id="navbar-logo">
+        <img src="../../assets/images/logo.svg" alt="Logo">
       </a>
       <mat-nav-list *ngIf="isLaptop">
         <a *ngFor="let page of pages" mat-list-item routerLink="{{ page.routerLink }}" routerLinkActive="active">{{

@@ -59,8 +59,7 @@
   }
 
   .highlight {
-    -webkit-text-decoration: $primary-color underline wavy;
-            text-decoration: $primary-color underline wavy;
+    color: $secondary-color;
   }
 
   p {
