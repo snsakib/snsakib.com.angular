@@ -13,6 +13,7 @@
     <!-- Navbar -->
     <mat-toolbar>
       <button type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="isLaptop ? false : true">
+        <!-- menu icon -->
         <img src="../../assets/images/menu.svg" alt="menu">
       </button>
       <a routerLink="/about" id="navbar-logo">
@@ -23,7 +24,10 @@
           page.linkText }}</a>
       </mat-nav-list>
     </mat-toolbar>
-    <!-- Pages -->
-    <router-outlet></router-outlet>
+
+    <!-- router outlet -->
+    <div id="router-outlet-container" [@routeAnimations]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

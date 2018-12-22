@@ -1,9 +1,13 @@
 import { Component, HostListener, OnInit } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+
+import { zoomInSlideOutAnimation } from "./route-animations";
 
 @Component({
   selector: "main-nav",
   templateUrl: "./main-nav.component.html",
-  styleUrls: ["./main-nav.component.scss"]
+  styleUrls: ["./main-nav.component.scss"],
+  animations: [zoomInSlideOutAnimation]
 })
 export class MainNavComponent implements OnInit {
   //Sets the menu links
@@ -25,6 +29,16 @@ export class MainNavComponent implements OnInit {
       linkText: "Contact"
     }
   ];
+
+  //Method related to route transition animations. Returns a string value representing the state of the animation based on the custom data of the current active route
+  prepareRoute(outlet: RouterOutlet) {
+    return (
+      outlet &&
+      outlet.activatedRouteData &&
+      outlet.activatedRouteData["animation"]
+    );
+  }
+
   //If the width of screen is equals or greather than 1024px, the value of the property becomes true.
   isLaptop: boolean;
 

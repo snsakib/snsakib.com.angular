@@ -21,7 +21,6 @@ mat-grid-list {
 
   mat-grid-tile {
     border: 1px solid transparent;
-    cursor: pointer;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
 
@@ -50,10 +49,12 @@ mat-grid-list {
       }
 
       a {
+        font-size: 3rem;
         text-align: center;
         height: 100%;
-        padding: 1rem 2rem;
+        padding: 0 2rem;
         color: $primary-color;
+        text-decoration: none;
         -webkit-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
 

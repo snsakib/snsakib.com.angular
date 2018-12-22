@@ -13,39 +13,12 @@ export class ProjectsComponent implements OnInit {
   //Move this data to firebase
   projects = [
     {
-      projectTitle: "Project 1",
+      projectTitle: "Weather Forecast App",
       category: "Website",
-      liveDemoLink: "#",
+      tags: ["angular", "d3.js", "api integration", "data visualization"],
+      liveDemoLink: "https://weather-forecast.stackblitz.io",
       imagePath: "../../assets/images/profile picture 400.jpg",
-      alt: "thumbnail image"
-    },
-    {
-      projectTitle: "Project 2",
-      category: "App",
-      liveDemoLink: "#",
-      imagePath: "../../assets/images/profile picture 400.jpg",
-      alt: "thumbnail image"
-    },
-    {
-      projectTitle: "Project 3",
-      category: "Website",
-      liveDemoLink: "#",
-      imagePath: "../../assets/images/profile picture 400.jpg",
-      alt: "thumbnail image"
-    },
-    {
-      projectTitle: "Project 4",
-      category: "Data Visualization",
-      liveDemoLink: "#",
-      imagePath: "../../assets/images/profile picture 400.jpg",
-      alt: "thumbnail image"
-    },
-    {
-      projectTitle: "Project 5",
-      category: "Website",
-      liveDemoLink: "#",
-      imagePath: "../../assets/images/profile picture 400.jpg",
-      alt: "thumbnail image"
+      alt: "Screenshot of weather forecast app"
     }
   ];
 

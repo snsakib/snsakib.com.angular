@@ -1,5 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
-@import './assets/styles/variables';
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+@font-face {
+  font-family: Azonix;
+  src: url(./assets/fonts/Azonix.otf)
+}
+
+@import '../src/assets/styles/variables';
 
 html,
 body {

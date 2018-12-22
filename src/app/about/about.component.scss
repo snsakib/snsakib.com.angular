@@ -1,65 +1,105 @@
-@import 'variables';
-@import 'mixins';
-@import 'helpers';
+@import "variables";
+@import "mixins";
+@import "helpers";
 
 :host {
   @extend .host;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   padding-top: 2rem;
-  padding-bottom: 2rem;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
+  position: relative;
+
+  //scrollbar styles (for firefox)
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color $bg-color;
+
+  //scrollbar styles (for chrome)
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 5rem;
+  }
 
   @include breakpointMin(tablet) {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
-  @include breakpointMin(lg) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-  }
-
-  @include breakpointMin(laptop) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-bottom: 10rem;
   }
 }
 
 .image {
-  text-align: center;
+  display: block;
+  margin: 0 auto 2rem auto;
+  opacity: 0;
+  -webkit-animation: slideDown 1.5s ease-out 0.5s forwards;
+  animation: slideDown 1.5s ease-out 0.5s forwards;
 
-  @include breakpointMin(lg) {
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    padding: 0 2rem;
+  border-radius: 50%;
+  border: 5px solid $primary-color;
+}
+
+.intro {
+  text-align: center;
+  opacity: 0;
+  -webkit-animation: slideUp 1s ease-out 1s forwards;
+  animation: slideUp 1s ease-out 1s forwards;
+  margin-bottom: 5rem;
+
+  #name {
+    font-family: Azonix;
+    font-size: 3rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+
+    @include breakpointMin(tablet) {
+      font-size: 5rem;
+    }
   }
 
+  #profession {
+    color: $text-color;
+    font-size: 2.5rem;
+
+    @include breakpointMin(laptop) {
+      font-size: 2.5rem;
+    }
+  }
 }
 
 .about {
-  padding: 2rem 0;
   line-height: 3.5rem;
+  padding-bottom: 5rem;
+  opacity: 0;
+  -webkit-animation: fadeIn 1s ease-out 1.5s forwards;
+  animation: fadeIn 1s ease-out 1.5s forwards;
+
+  .punchline {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    border-top: 1px solid $primary-color;
+    border-bottom: 1px solid $primary-color;
+    padding: 20px 10px;
+    margin: 20px auto;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 2rem;
+  }
 
   h1 {
     margin: 1rem 0;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 400;
     color: $primary-color;
   }
 
   .highlight {
-    color: $secondary-color;
+    color: $primary-color;
   }
 
   p {
@@ -74,13 +114,90 @@
     }
   }
 
-  .iconImg {
-    padding: 10px;
-    -webkit-transform: translateY(15px);
-    transform: translateY(15px);
-
-    &:hover {
-      background-color: lighten($color: $bg-color, $amount: 5);
+  .contact-link {
+    img {
+      width: 4rem;
+      height: 4rem;
+      margin: 0 1rem;
     }
+  }
+}
+
+//Animation rules for image
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+//Animation rules for intro text
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+//Animation rules for about text
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

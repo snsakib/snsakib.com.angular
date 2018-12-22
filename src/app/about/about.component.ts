@@ -9,6 +9,7 @@ import { MatSnackBar } from "@angular/material/snack-bar";
 export class AboutComponent {
   email: string = "contact@snsakib.com";
 
+  //Shows alert when user clicks the email
   openSnackBar() {
     if (window.innerWidth >= 1024) {
       this.snackBar.open("Opening e-mail app. Please wait!", "", {

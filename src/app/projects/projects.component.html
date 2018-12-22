@@ -1,17 +1,16 @@
 <p class="page-title">Things I've done so far...</p>
 <mat-grid-list [cols]="colNum" gutterSize="50px" rowHeight="250px">
-  <mat-grid-tile *ngFor="let project of projects" routerLink="/blog">
+  <mat-grid-tile *ngFor="let project of projects">
     <img src="{{ project.imagePath }}" alt="{{ project.alt }}">
     <mat-grid-tile-footer>
       <div>
         <h1>{{ project.projectTitle }}</h1>
-        {{ project.category }}
+        <!-- {{ project.category }} -->
       </div>
-      <!-- TODO: Delete this after consideration
-      <a href="{{ project.liveDemoLink }}">
-        <i class="material-icons">visibility</i>
-      </a> -->
+      <a href="{{ project.liveDemoLink }}" target="_blanck" rel="noopener" title="View Project">
+        &#11179;
+      </a>
     </mat-grid-tile-footer>
   </mat-grid-tile>
 </mat-grid-list>
-<button mat-flat-button routerLink="/blog">View My Blog</button>
+<!-- <button mat-flat-button routerLink="/blog">View My Blog</button> -->

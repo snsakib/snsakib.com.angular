@@ -5,7 +5,7 @@
 
 .host {
   display: block;
-  min-height: calc(100% - #{$toolbar-height});
+  height: calc(100vh - #{$toolbar-height});
   background-color: $bg-color;
   color: $text-color;
   letter-spacing: 1px;

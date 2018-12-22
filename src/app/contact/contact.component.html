@@ -1,9 +1,6 @@
-<h1>
-  <a href="mailto:contact@snsakib.com" (click)="openSnackBar()">contact@snsakib.com</a>
-</h1>
-<a href="https://www.linkedin.com/in/s-n-sakib" target="_blank" rel="noopener">
-  <img src="../../assets/images/linkedin.svg" alt="LinkedIn logo" class="iconImg">
-</a>
-<a href="https://github.com/snsakib" target="_blank" rel="noopener">
-  <img src="../../assets/images/github.svg" alt="GitHub logo" class="iconImg">
-</a>
+<section class="container">
+  <a href="{{ contact.href }}" *ngFor="let contact of contacts" class="card">
+    <img src="{{ contact.imgPath }}" alt="{{ contact.alt }}">
+    {{ contact.linkText }}
+  </a>
+</section>
