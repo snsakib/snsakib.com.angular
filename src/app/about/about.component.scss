@@ -51,7 +51,6 @@
   margin-bottom: 5rem;
 
   #name {
-    font-family: Azonix;
     font-size: 3rem;
     color: $primary-color;
     margin-bottom: 2rem;
@@ -64,10 +63,6 @@
   #profession {
     color: $text-color;
     font-size: 2.5rem;
-
-    @include breakpointMin(laptop) {
-      font-size: 2.5rem;
-    }
   }
 }
 

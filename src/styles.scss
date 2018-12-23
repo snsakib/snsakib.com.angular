@@ -3,13 +3,10 @@
 //fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
 
-@font-face {
-  font-family: Azonix;
-  src: url(./assets/fonts/Azonix.otf)
-}
-
+//sass partial style sheets
 @import '../src/assets/styles/variables';
 
+//resets custom browser rules
 html,
 body {
   height: 100%;
