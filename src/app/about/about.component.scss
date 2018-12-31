@@ -5,7 +5,7 @@
 :host {
   @extend .host;
   padding-top: 2rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
   position: relative;
 
   //scrollbar styles (for firefox)
@@ -29,6 +29,10 @@
 
   @include breakpointMin(tablet) {
     padding-bottom: 10rem;
+  }
+
+  @include breakpointMin(laptop) {
+    font-size: 2.3rem;
   }
 }
 
@@ -62,7 +66,11 @@
 
   #profession {
     color: $text-color;
-    font-size: 2.5rem;
+    font-size: 2rem;
+
+    @include breakpointMin(tablet) {
+      font-size: 3rem;
+    }
   }
 }
 
@@ -82,8 +90,6 @@
     padding: 20px 10px;
     margin: 20px auto;
     text-align: center;
-    letter-spacing: 2px;
-    font-size: 2rem;
   }
 
   h1 {
@@ -114,6 +120,8 @@
       width: 4rem;
       height: 4rem;
       margin: 0 1rem;
+      -webkit-transform: translateY(10px);
+      transform: translateY(10px);
     }
   }
 }
