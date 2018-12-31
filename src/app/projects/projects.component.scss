@@ -1,9 +1,10 @@
-@import 'variables';
-@import 'mixins';
-@import 'helpers';
+@import "../../assets/styles/variables";
+@import "../../assets/styles/helpers";
+@import "./pages/host";
 
 :host {
   @extend .host;
+  @extend .page-horizontal-padding;
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;

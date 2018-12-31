@@ -1,39 +1,22 @@
-@import "variables";
-@import "mixins";
-@import "helpers";
+@import '../../assets/styles/variables';
+@import '../../assets/styles/helpers';
+@import './utils/mixins';
+@import './pages/host';
+@import './components/scrollbar';
 
 :host {
   @extend .host;
-  padding-top: 2rem;
-  font-size: 2rem;
-  position: relative;
-
-  //scrollbar styles (for firefox)
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: $primary-color $bg-color;
-
-  //scrollbar styles (for chrome)
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-button {
-    display: none;
-  }
+  @extend .page-horizontal-padding;
+  @extend .scrollbar;
 
   &::-webkit-scrollbar-thumb {
     background: $primary-color;
-    border-radius: 5rem;
   }
 
-  @include breakpointMin(tablet) {
-    padding-bottom: 10rem;
-  }
-
-  @include breakpointMin(laptop) {
-    font-size: 2.3rem;
-  }
+  scrollbar-color: $primary-color $bg-color;
+  height: calc(100vh - #{$toolbar-height});
+  color: $text-color;
+  padding-top: 2rem;
 }
 
 .image {
@@ -42,7 +25,6 @@
   opacity: 0;
   -webkit-animation: slideDown 1.5s ease-out 0.5s forwards;
   animation: slideDown 1.5s ease-out 0.5s forwards;
-
   border-radius: 50%;
   border: 5px solid $primary-color;
 }
@@ -76,6 +58,8 @@
 
 .about {
   line-height: 3.5rem;
+  letter-spacing: 1px;
+  font-size: 2rem;
   padding-bottom: 5rem;
   opacity: 0;
   -webkit-animation: fadeIn 1s ease-out 1.5s forwards;
@@ -104,7 +88,7 @@
   }
 
   p {
-    margin: 5rem 0;
+    margin: 2.5rem 0;
   }
 
   a {

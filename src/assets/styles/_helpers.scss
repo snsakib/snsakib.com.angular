@@ -1,27 +1,7 @@
 //Helper classes for stylings
 
 @import './variables';
-@import './mixins';
-
-.host {
-  display: block;
-  height: calc(100vh - #{$toolbar-height});
-  background-color: $bg-color;
-  color: $text-color;
-  letter-spacing: 1px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  @include breakpointMin(tablet) {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  @include breakpointMin(laptop) {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-}
+@import './utils/mixins';
 
 .flat-button {
   background-color: $primary-color;

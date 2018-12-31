@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --aot=true --buildOptimizer=true --optimization=true --prod=true",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "firebase": "firebase deploy",
+    "git": "git add --all && git commit -m \"small fixes\" && git push",
+    "all": "npm run build && npm run git && npm run firebase"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,7 @@
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
+    "skb-scss": "^1.2.4",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
