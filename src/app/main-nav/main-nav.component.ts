@@ -1,32 +1,32 @@
-import { Component, HostListener, OnInit } from "@angular/core";
-import { RouterOutlet } from "@angular/router";
+import { Component, HostListener, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
-import { zoomInSlideOutAnimation } from "./route-animations";
+import { zoomInSlideOutAnimation } from './route-animations';
 
 @Component({
-  selector: "main-nav",
-  templateUrl: "./main-nav.component.html",
-  styleUrls: ["./main-nav.component.scss"],
+  selector: 'main-nav',
+  templateUrl: './main-nav.component.html',
+  styleUrls: ['./main-nav.component.scss'],
   animations: [zoomInSlideOutAnimation]
 })
 export class MainNavComponent implements OnInit {
   //Sets the menu links
   pages = [
     {
-      routerLink: "/about",
-      linkText: "About"
+      routerLink: '/about',
+      linkText: 'About'
     },
-    // {
-    //   routerLink: "/projects",
-    //   linkText: "Projects"
-    // },
+    {
+      routerLink: '/projects',
+      linkText: 'Projects'
+    },
     // {
     //   routerLink: "/blog",
     //   linkText: "Blog"
     // },
     {
-      routerLink: "/contact",
-      linkText: "Contact"
+      routerLink: '/contact',
+      linkText: 'Contact'
     }
   ];
 
@@ -35,7 +35,7 @@ export class MainNavComponent implements OnInit {
     return (
       outlet &&
       outlet.activatedRouteData &&
-      outlet.activatedRouteData["animation"]
+      outlet.activatedRouteData['animation']
     );
   }
 
@@ -43,7 +43,7 @@ export class MainNavComponent implements OnInit {
   isLaptop: boolean;
 
   //Checks the window width & sets the 'isLaptop' property value
-  @HostListener("window:resize")
+  @HostListener('window:resize')
   onResize() {
     if (window.innerWidth < 1024) {
       this.isLaptop = false;

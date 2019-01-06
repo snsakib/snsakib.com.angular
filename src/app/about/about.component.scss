@@ -1,8 +1,8 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/helpers';
-@import './utils/mixins';
-@import './pages/host';
-@import './components/scrollbar';
+@import 'mixins';
+@import 'host';
+@import 'scrollbar';
 
 :host {
   @extend .host;
@@ -26,7 +26,6 @@
   -webkit-animation: slideDown 1.5s ease-out 0.5s forwards;
   animation: slideDown 1.5s ease-out 0.5s forwards;
   border-radius: 50%;
-  border: 5px solid $primary-color;
 }
 
 .intro {

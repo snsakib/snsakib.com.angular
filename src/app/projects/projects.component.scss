@@ -1,10 +1,23 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/helpers";
-@import "./pages/host";
+@import "host";
+@import "scrollbar";
+
+$img-height: 30rem;
+$footer-height: 7rem;
+$project-height: calc(#{$img-height}+#{$footer-height});
 
 :host {
   @extend .host;
   @extend .page-horizontal-padding;
+  @extend .scrollbar;
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+  }
+
+  scrollbar-color: $primary-color $bg-color;
+  height: calc(100vh - #{$toolbar-height});
   padding-top: 5rem;
   padding-bottom: 5rem;
   text-align: center;
@@ -17,13 +30,24 @@
   letter-spacing: 1px;
 }
 
-mat-grid-list {
-  margin: 5rem auto;
+.projects {
+  min-width: 28rem;
+  max-width: 60rem;
+  margin: 5rem auto 0;
 
-  mat-grid-tile {
+  .project {
+    width: 100%;
+    height: $project-height;
+    border-radius: 3px;
+    overflow: hidden;
     border: 1px solid transparent;
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    background-color: black;
+
+    &:not(:last-of-type) {
+      margin-bottom: 5rem;
+    }
 
     &:hover {
       border: 1px solid $primary-color;
@@ -31,42 +55,53 @@ mat-grid-list {
 
     img {
       width: 100%;
-      height: 100%;
+      height: $img-height;
     }
 
     &-footer {
-      text-align: left;
-      color: $text-color;
+      height: $footer-height;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
-      padding-right: 0;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
 
-      h1 {
-        font-size: 1.8rem;
-        font-weight: 400;
-        margin: 0 0 2px 0;
-        color: $primary-color;
+      .project-intro {
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+        text-align: left;
+        padding: 1rem 2rem;
+
+        h1 {
+          font-size: 2rem;
+          color: $primary-color;
+        }
+
+        p {
+          font-size: 1.6rem;
+          margin-top: 1rem;
+          color: $text-color;
+        }
       }
 
       a {
-        font-size: 3rem;
-        text-align: center;
-        height: 100%;
-        padding: 0 2rem;
-        color: $primary-color;
         text-decoration: none;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
+        color: $primary-color;
+        font-size: 3rem;
+        padding: 1.5rem;
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+        -webkit-transition: all .3s ease-out;
+        transition: all .3s ease-out;
 
         &:hover {
-          background-color: lighten($color: $bg-color, $amount: 5);
+          background-color: $bg-color-light;
         }
       }
     }
   }
-}
-
-button {
-  @extend .flat-button;
 }

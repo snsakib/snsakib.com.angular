@@ -1,7 +1,7 @@
 @import "../../assets/styles/variables";
 @import "../../assets/styles/helpers";
-@import "./utils/mixins";
-@import "./pages/host";
+@import "mixins";
+@import "host";
 
 :host {
   @extend .host;

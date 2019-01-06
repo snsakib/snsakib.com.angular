@@ -10,8 +10,6 @@ export class ContactComponent implements OnInit {
   colNum: number;
   el = document.querySelectorAll('.mat-grid-tile .mat-figure');
 
-  //TODO
-  //Move this data to firebase
   contacts = [
     {
       imgPath: '../../assets/images/mail.svg',
@@ -59,6 +57,5 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.onWindowResize();
-    // this.renderer.removeClass(this.el, "mat-figure");
   }
 }

@@ -12,9 +12,9 @@ const routes: Routes = [
     data: { animation: 'aboutPage' }
   },
   {
-    path: "projects",
+    path: 'projects',
     component: ProjectsComponent,
-    data: { animation: "projectsPage" }
+    data: { animation: 'projectsPage' }
   },
   { path: 'blog', component: BlogComponent, data: { animation: 'blogPage' } },
   {
