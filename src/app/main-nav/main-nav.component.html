@@ -12,9 +12,9 @@
   <mat-sidenav-content>
     <!-- Navbar -->
     <mat-toolbar>
-      <button type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="isLaptop ? false : true">
+      <button type="button" aria-label="Toggle sidenav" (click)="drawer.toggle()" *ngIf="isLaptop ? false : true" id="menuIcon">
         <!-- menu icon -->
-        <img src="../../assets/images/menu.svg" alt="menu">
+        &#9776;
       </button>
       <a routerLink="/about" id="navbar-logo">
         <img src="../../assets/images/logo.svg" alt="Logo">
