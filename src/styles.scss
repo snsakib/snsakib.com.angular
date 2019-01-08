@@ -1,5 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+@font-face {
+  font-family: 'Roboto';
+  src: url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+  font-display: swap;
+}
+
+// @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
 html,
 body,

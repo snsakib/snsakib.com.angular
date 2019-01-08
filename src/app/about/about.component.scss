@@ -98,14 +98,16 @@
   #cta {
     text-align: center;
 
-    a[mat-flat-button] {
+    #hireMe {
       @extend .flat-button;
       width: 100%;
       font-size: 2.2rem;
+      margin-bottom: 1rem;
     }
 
-    a {
+    #resume {
       font-size: 1.8rem;
+      padding: 1rem;
     }
   }
 
