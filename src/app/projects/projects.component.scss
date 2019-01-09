@@ -49,10 +49,6 @@ $project-height: calc(#{$img-height}+#{$footer-height});
       margin-bottom: 5rem;
     }
 
-    &:hover {
-      border: 1px solid $primary-color;
-    }
-
     img {
       width: 100%;
       height: $img-height;
@@ -89,14 +85,13 @@ $project-height: calc(#{$img-height}+#{$footer-height});
       }
 
       a {
+        font-size: 1.8rem;
+        height: 100%;
+        padding: 2.3rem;
         text-decoration: none;
         color: $primary-color;
-        font-size: 3rem;
-        padding: 1.5rem;
-        -ms-flex-item-align: stretch;
-        align-self: stretch;
-        -webkit-transition: all .3s ease-out;
-        transition: all .3s ease-out;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
 
         &:hover {
           background-color: $bg-color-light;
