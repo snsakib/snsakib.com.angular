@@ -1,26 +1,27 @@
 @import "../../assets/styles/variables";
 @import "host";
+@import "responsive-x-padding";
 
 :host {
   @extend .host;
-  @extend .page-horizontal-padding;
+  @extend .responsive-x-padding;
   text-align: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
 }
 
 h1 {
   color: $primary-color;
-  font-size: 3rem;
+  font-size: 1.875rem;
   font-weight: 400;
   letter-spacing: 1px;
-  margin: 0 0 5rem 0;
+  margin: 0 0 3.125rem 0;
 }
 
 .post {
-  max-width: 70rem;
-  padding: 1rem;
-  margin: 0 auto 3rem;
+  max-width: 43.75rem;
+  padding: .625rem;
+  margin: 0 auto 1.875rem;
   text-align: left;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -29,8 +30,8 @@ h1 {
   transition: all .5s ease-in-out;
 
   h1 {
-    font-size: 2rem;
-    margin: 0 0 1rem 0;
+    font-size: 1.25rem;
+    margin: 0 0 .625rem 0;
     font-weight: 400;
   }
 
@@ -41,7 +42,7 @@ h1 {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    font-size: 1.8rem;
+    font-size: 1.125rem;
     color: $text-color;
   }
 

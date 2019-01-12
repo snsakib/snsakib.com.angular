@@ -2,13 +2,14 @@
 @import "../../assets/styles/helpers";
 @import "mixins";
 @import "host";
+@import "responsive-x-padding";
 
 :host {
   @extend .host;
-  @extend .page-horizontal-padding;
+  @extend .responsive-x-padding;
   height: calc(100vh - #{$toolbar-height});
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -35,10 +36,10 @@
   align-items: center;
 
   .card {
-    font-size: 2rem;
+    font-size: 1.25rem;
     color: $text-color;
-    width: 28rem;
-    margin: 2rem 0;
+    width: 17.5rem;
+    margin: 1.25rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -54,9 +55,9 @@
     }
 
     img {
-      width: 4rem;
-      height: 4rem;
-      margin-right: 1rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-right: .625rem;
     }
   }
 }

@@ -1,29 +1,30 @@
 @import "../../assets/styles/variables";
 @import "host";
 @import "mixins";
+@import "responsive-x-padding";
 
 .sidenav-container {
   height: 100vh;
 
   .sidenav {
-    width: 20rem;
+    width: 12.5rem;
     background-color: $bg-color;
 
     .mat-toolbar {
       background-color: $bg-color;
-      padding-top: 10rem;
-      padding-bottom: 10rem;
+      padding-top: 6.25rem;
+      padding-bottom: 6.25rem;
 
       #sidenav-logo {
-        width: 5rem;
-        height: 5rem;
+        width: 3.125rem;
+        height: 3.125rem;
       }
     }
 
     mat-nav-list {
       a {
         color: $secondary-color;
-        font-size: 2rem;
+        font-size: 1.25rem;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
         -webkit-transition: all .5s ease-in-out;
@@ -47,7 +48,7 @@
     background-color: $bg-color;
 
     mat-toolbar {
-      @extend .page-horizontal-padding;
+      @extend .responsive-x-padding;
       position: -webkit-sticky;
       position: sticky;
       top: 0;
@@ -59,16 +60,16 @@
 
       #menuIcon {
         background-color: $bg-color;
-        margin-right: 2rem;
-        padding: 1rem;
+        margin-right: 1.25rem;
+        padding: .625rem;
         color: $secondary-color;
-        font-size: 3rem;
+        font-size: 1.875rem;
         border: none;
       }
 
       #navbar-logo {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.1875rem;
+        height: 2.1875rem;
       }
 
       mat-nav-list {
@@ -81,7 +82,7 @@
         a {
           height: $toolbar-height;
           color: $text-color;
-          font-size: 2rem;
+          font-size: 1.25rem;
           border-bottom: 2px solid transparent;
           -webkit-transition: all .5s ease-in-out;
           transition: all .5s ease-in-out;

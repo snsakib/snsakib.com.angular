@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "firebase": "firebase deploy",
-    "git": "git add --all && git commit -m \"projects page added\" && git push",
+    "git": "git add --all && git commit -m \"base font size fixed\" && git push",
     "all": "npm run build && npm run firebase && npm run git"
   },
   "private": true,
@@ -26,14 +26,15 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
+    "reset-css": "^4.0.1",
     "rxjs": "~6.3.3",
-    "skb-scss": "^2.0.2",
+    "skb-scss": "^3.0.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.11.4",
+    "@angular-devkit/build-angular": "^0.12.1",
     "@angular-devkit/build-ng-packagr": "~0.10.0",
-    "@angular/cli": "~7.0.3",
+    "@angular/cli": "^7.2.1",
     "@angular/compiler-cli": "~7.0.0",
     "@angular/language-service": "~7.0.0",
     "@types/node": "~8.9.4",

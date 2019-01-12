@@ -2,14 +2,15 @@
 @import "../../assets/styles/helpers";
 @import "host";
 @import "scrollbar";
+@import "responsive-x-padding";
 
-$img-height: 30rem;
-$footer-height: 7rem;
+$img-height: 18.75rem;
+$footer-height: 4.375rem;
 $project-height: calc(#{$img-height}+#{$footer-height});
 
 :host {
   @extend .host;
-  @extend .page-horizontal-padding;
+  @extend .responsive-x-padding;
   @extend .scrollbar;
 
   &::-webkit-scrollbar-thumb {
@@ -18,22 +19,22 @@ $project-height: calc(#{$img-height}+#{$footer-height});
 
   scrollbar-color: $primary-color $bg-color;
   height: calc(100vh - #{$toolbar-height});
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3.125rem;
+  padding-bottom: 3.125rem;
   text-align: center;
 }
 
 .page-title {
   color: $primary-color;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 1.875rem;
   letter-spacing: 1px;
 }
 
 .projects {
-  min-width: 28rem;
-  max-width: 60rem;
-  margin: 5rem auto 0;
+  min-width: 17.5rem;
+  max-width: 37.5rem;
+  margin: 3.125rem auto 0;
 
   .project {
     width: 100%;
@@ -46,7 +47,7 @@ $project-height: calc(#{$img-height}+#{$footer-height});
     background-color: black;
 
     &:not(:last-of-type) {
-      margin-bottom: 5rem;
+      margin-bottom: 3.125rem;
     }
 
     img {
@@ -70,24 +71,24 @@ $project-height: calc(#{$img-height}+#{$footer-height});
         -ms-flex-item-align: stretch;
         align-self: stretch;
         text-align: left;
-        padding: 1rem 2rem;
+        padding: .625rem 1.25rem;
 
         h1 {
-          font-size: 2rem;
+          font-size: 1.25rem;
           color: $primary-color;
         }
 
         p {
-          font-size: 1.6rem;
-          margin-top: 1rem;
+          font-size: 1rem;
+          margin-top: .625rem;
           color: $text-color;
         }
       }
 
       a {
-        font-size: 1.8rem;
+        font-size: 1.125rem;
         height: 100%;
-        padding: 2.3rem;
+        padding: 1.4375rem;
         text-decoration: none;
         color: $primary-color;
         -webkit-transition: all .3s ease-in-out;
