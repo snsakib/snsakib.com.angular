@@ -17,46 +17,97 @@
   scrollbar-color: $primary-color $bg-color;
   height: calc(100vh - #{$toolbar-height});
   color: $text-color;
-  padding-top: 1.25rem;
 }
 
-.image {
-  display: block;
-  margin: 0 auto 1.25rem auto;
-  opacity: 0;
-  -webkit-animation: slideDown 1.5s ease-out 0.5s forwards;
-  animation: slideDown 1.5s ease-out 0.5s forwards;
-  border-radius: 50%;
-}
+#home {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
-.intro {
-  text-align: center;
-  opacity: 0;
-  -webkit-animation: slideUp 1s ease-out 1s forwards;
-  animation: slideUp 1s ease-out 1s forwards;
-  margin-bottom: 1.25rem;
+  @include breakpointMin(tablet) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
 
-  #name {
-    font-size: 1.875rem;
-    color: $primary-color;
-    margin-bottom: 1.25rem;
+  #profile-picture {
+    opacity: 0;
+    margin: 2rem;
+    -webkit-animation: slideDown 1.5s ease-out .5s forwards;
+    animation: slideDown 1.5s ease-out .5s forwards;
 
     @include breakpointMin(tablet) {
-      font-size: 3.125rem;
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2;
     }
   }
 
-  #profession {
-    color: $text-color;
-    font-size: 1.25rem;
+  #intro {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    opacity: 0;
+    -webkit-animation: slideUp 1.5s ease-out .5s forwards;
+    animation: slideUp 1.5s ease-out .5s forwards;
 
     @include breakpointMin(tablet) {
-      font-size: 1.875rem;
+      text-align: left;
+    }
+
+    #name {
+      font-size: 1.875rem; //30px
+      color: $primary-color;
+
+      @include breakpointMin(tablet) {
+        font-size: 2.5rem;
+      }
+    }
+
+    #profession {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+
+      @include breakpointMin(tablet) {
+        font-size: 1.8rem;
+        margin: 1.5rem 0;
+      }
+    }
+
+    #punchline {
+      font-size: 1rem;
+      line-height: 1.3rem;
+      font-style: oblique;
+
+      @include breakpointMin(tablet) {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+      }
     }
   }
 }
 
-.about {
+#about {
   line-height: 2.1875rem;
   letter-spacing: 1px;
   font-size: 1.25rem;
