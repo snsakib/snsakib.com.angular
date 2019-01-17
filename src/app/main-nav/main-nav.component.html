@@ -5,7 +5,7 @@
       <img src="../../assets/images/logo.svg" alt="Logo of Syed Nazmus Sakib" id="sidenav-logo">
     </mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let page of pages" mat-list-item routerLink="{{ page.routerLink }}" routerLinkActive="active">{{
+      <a *ngFor="let page of pages" mat-list-item routerLink="{{ page.routerLink }}" routerLinkActive="active" (click)="drawer.toggle()">{{
         page.linkText }}</a>
     </mat-nav-list>
   </mat-sidenav>
