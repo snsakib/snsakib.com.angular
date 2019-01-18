@@ -2,7 +2,6 @@
 <div class="post" *ngFor="let post of posts" routerLink="{{ post.routerLink }}">
   <h1>{{ post.title }}</h1>
   <p>
-    <span>{{ post.date }}</span>
-    <span>{{ post.timeToRead }} min read</span>
+    <span>{{ post.date }}</span> <span>{{ post.timeToRead }} min read</span>
   </p>
 </div>

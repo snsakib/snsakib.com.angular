@@ -1,8 +1,8 @@
-@import "../../assets/styles/variables";
-@import "../../assets/styles/helpers";
-@import "mixins";
-@import "host";
-@import "responsive-x-padding";
+@import '../../assets/styles/variables';
+@import '../../assets/styles/helpers';
+@import 'mixins';
+@import 'host';
+@import 'responsive-x-padding';
 
 :host {
   @extend .host;
@@ -46,9 +46,9 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-transition: .3s ease-in-out;
-    -webkit-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 
     &:hover {
       color: $primary-color;
@@ -57,7 +57,7 @@
     img {
       width: 2.5rem;
       height: 2.5rem;
-      margin-right: .625rem;
+      margin-right: 0.625rem;
     }
   }
 }

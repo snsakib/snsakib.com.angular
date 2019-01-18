@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "firebase": "firebase deploy",
-    "git": "git add --all && git commit -m \"base font size fixed\" && git push",
+    "git": "git add --all && git commit -m \"resume update\" && git push",
     "all": "npm run build && npm run firebase && npm run git"
   },
   "private": true,

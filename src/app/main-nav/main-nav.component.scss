@@ -1,7 +1,7 @@
-@import "../../assets/styles/variables";
-@import "host";
-@import "mixins";
-@import "responsive-x-padding";
+@import '../../assets/styles/variables';
+@import 'host';
+@import 'mixins';
+@import 'responsive-x-padding';
 
 .sidenav-container {
   height: 100vh;
@@ -27,8 +27,8 @@
         font-size: 1.25rem;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-        -webkit-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         &.active {
           color: $primary-color;
@@ -57,11 +57,10 @@
       background-color: $bg-color;
       color: $secondary-color;
 
-
       #menuIcon {
         background-color: $bg-color;
         margin-right: 1.25rem;
-        padding: .625rem;
+        padding: 0.625rem;
         color: $secondary-color;
         font-size: 1.875rem;
         border: none;
@@ -88,8 +87,8 @@
           color: $text-color;
           font-size: 1.25rem;
           border-bottom: 2px solid transparent;
-          -webkit-transition: all .5s ease-in-out;
-          transition: all .5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out;
 
           &.active {
             color: $primary-color;
