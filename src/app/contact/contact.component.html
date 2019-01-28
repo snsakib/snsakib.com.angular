@@ -1,5 +1,11 @@
 <section class="container">
-  <a href="{{ contact.href }}" *ngFor="let contact of contacts" class="card">
+  <a
+    href="{{ contact.href }}"
+    *ngFor="let contact of contacts"
+    target="_blanck"
+    rel="noopener"
+    class="card"
+  >
     <img src="{{ contact.imgPath }}" alt="{{ contact.alt }}" />
     {{ contact.linkText }}
   </a>

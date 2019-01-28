@@ -152,7 +152,12 @@
 
   #cta {
     #hireMe {
-      @extend .flat-button;
+      text-decoration: none;
+      color: white;
+      padding: 0.2em 0.7em;
+      font-weight: 500;
+      background-color: $primary-color;
+      border-radius: 5px;
     }
   }
 

@@ -1,32 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
-
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
+
+// Feature Modules
 import { AngularMaterialModule } from './angular-material.module';
+import { AboutModule } from './about/about.module';
+import { ProjectsModule } from './projects/projects.module';
+import { BlogModule } from './blog/blog.module';
+import { ContactModule } from './contact/contact.module';
+import { AppRoutingModule } from './app-routing.module';
+
+// Components
+import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { BlogComponent } from './blog/blog.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MainNavComponent,
-    ProjectsComponent,
-    BlogComponent,
-    AboutComponent,
-    ContactComponent
-  ],
+  declarations: [AppComponent, MainNavComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    AboutModule,
+    ProjectsModule,
+    BlogModule,
+    ContactModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,11 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
-  //Sets the column number of the material grid list depending on the width of the screen
-  colNum: number;
-  el = document.querySelectorAll('.mat-grid-tile .mat-figure');
-
+export class ContactComponent {
   contacts = [
     {
       imgPath: '../../assets/images/mail.svg',
@@ -34,28 +30,8 @@ export class ContactComponent implements OnInit {
       alt: 'github icon',
       href: 'https://github.com/snsakib',
       linkText: '/snsakib'
-    },
-    {
-      imgPath: '../../assets/images/npm.svg',
-      alt: 'npm icon',
-      href: 'https://www.npmjs.com/~snsakib',
-      linkText: '/~snsakib'
     }
   ];
 
-  //Checks the screen width & sets the property value of 'colNum'
-  @HostListener('window:resize')
-  onWindowResize() {
-    if (window.innerWidth <= 500) {
-      this.colNum = 1;
-    } else {
-      this.colNum = 4;
-    }
-  }
-
   constructor() {}
-
-  ngOnInit() {
-    this.onWindowResize();
-  }
 }

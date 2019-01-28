@@ -1,6 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+
+// Module for router configuration
 import { RouterOutlet } from '@angular/router';
 
+// Routing animation file
 import { zoomInSlideOutAnimation } from './route-animations';
 
 @Component({
