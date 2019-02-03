@@ -4,12 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --aot=true --buildOptimizer=true --optimization=true --prod=true",
+    "build": "ng build --prod=true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "firebase": "firebase deploy",
-    "git": "git add --all && git commit -m \"font preload\" && git push",
+    "git": "git add --all && git commit -m \"remove google analytics\" && git push",
     "all": "npm run build && npm run firebase && npm run git"
   },
   "private": true,
