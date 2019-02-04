@@ -162,10 +162,11 @@
   }
 
   .contact-link {
-    img {
+    svg {
       width: 2.5rem;
       height: 2.5rem;
       margin: 0 0.625rem;
+      fill: $primary-color;
       -webkit-transform: translateY(10px);
       transform: translateY(10px);
     }

@@ -8,13 +8,13 @@ import { Component } from '@angular/core';
 export class ContactComponent {
   contacts = [
     {
-      imgPath: '../../assets/images/mail.svg',
+      imgPath: '../../assets/images/logo-defs.svg#icon-mail',
       alt: 'mail icon',
       href: 'mailto:contact@snsakib.com',
       linkText: 'contact@snsakib.com'
     },
     {
-      imgPath: '../../assets/images/linkedin.svg',
+      imgPath: '../../assets/images/logo-defs.svg#icon-linkedin-square',
       alt: 'linkedin icon',
       href: 'https://www.linkedin.com/in/s-n-sakib',
       linkText: '/in/s-n-sakib'

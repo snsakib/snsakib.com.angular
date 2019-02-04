@@ -1,4 +1,4 @@
-<section class="container">
+<!-- <section class="container">
   <a
     href="{{ contact.href }}"
     *ngFor="let contact of contacts"
@@ -8,5 +8,51 @@
   >
     <img src="{{ contact.imgPath }}" alt="{{ contact.alt }}" />
     {{ contact.linkText }}
+  </a>
+</section> -->
+<section class="container">
+  <a
+    href="mailto:contact@snsakib.com"
+    target="_blanck"
+    rel="noopener"
+    class="card"
+  >
+    <svg>
+      <use href="../../assets/images/logo-defs.svg#icon-mail"></use>
+    </svg>
+    contact@snsakib.com
+  </a>
+  <a
+    href="https://www.linkedin.com/in/s-n-sakib"
+    target="_blanck"
+    rel="noopener"
+    class="card"
+  >
+    <svg>
+      <use href="../../assets/images/logo-defs.svg#icon-linkedin"></use>
+    </svg>
+    /in/s-n-sakib
+  </a>
+  <a
+    href="https://www.twitter.com/syed_n_sakib"
+    target="_blanck"
+    rel="noopener"
+    class="card"
+  >
+    <svg>
+      <use href="../../assets/images/logo-defs.svg#icon-twitter"></use>
+    </svg>
+    @syed_n_sakib
+  </a>
+  <a
+    href="https://github.com/snsakib"
+    target="_blanck"
+    rel="noopener"
+    class="card"
+  >
+    <svg>
+      <use href="../../assets/images/logo-defs.svg#icon-github"></use>
+    </svg>
+    /snsakib
   </a>
 </section>

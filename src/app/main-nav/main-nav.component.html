@@ -9,11 +9,9 @@
     opened="false"
   >
     <mat-toolbar>
-      <img
-        src="../../assets/images/logo.svg"
-        alt="Logo of Syed Nazmus Sakib"
-        id="sidenav-logo"
-      />
+      <svg id="sidenav-logo">
+        <use href="../../assets/images/logo-defs.svg#icon-logo"></use>
+      </svg>
     </mat-toolbar>
     <mat-nav-list>
       <a
@@ -40,7 +38,9 @@
         &#9776;
       </button>
       <a routerLink="/about" id="navbar-logo">
-        <img src="../../assets/images/logo.svg" alt="Logo" />
+        <svg id="navbar-logo">
+          <use href="../../assets/images/logo-defs.svg#icon-logo"></use>
+        </svg>
       </a>
       <mat-nav-list *ngIf="isLaptop">
         <a

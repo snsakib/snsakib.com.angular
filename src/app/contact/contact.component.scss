@@ -54,14 +54,11 @@
       color: $primary-color;
     }
 
-    img {
+    svg {
       width: 2.5rem;
       height: 2.5rem;
       margin-right: 0.625rem;
+      fill: $primary-color;
     }
   }
-}
-
-button {
-  @extend .flat-button;
 }
