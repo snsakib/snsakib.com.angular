@@ -73,6 +73,13 @@
       #navbar-logo {
         width: 2.1875rem;
         height: 2.1875rem;
+        display: block;
+
+        object {
+          width: 2.1875rem;
+          height: 2.1875rem;
+          pointer-events: none;
+        }
       }
 
       mat-nav-list {

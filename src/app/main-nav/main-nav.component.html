@@ -38,9 +38,10 @@
         &#9776;
       </button>
       <a routerLink="/about" id="navbar-logo">
-        <svg id="navbar-logo">
-          <use href="../../assets/images/logo-defs.svg#icon-logo"></use>
-        </svg>
+        <object
+          data="../../assets/images/sprite.svg#svgView(viewBox(0,0,24,24))"
+          type="image/svg+xml"
+        ></object>
       </a>
       <mat-nav-list *ngIf="isLaptop">
         <a

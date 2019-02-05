@@ -162,13 +162,18 @@
   }
 
   .contact-link {
-    svg {
-      width: 2.5rem;
-      height: 2.5rem;
-      margin: 0 0.625rem;
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    margin: 0 0.625rem;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+
+    object {
+      height: 3rem;
+      width: 3rem;
       fill: $primary-color;
-      -webkit-transform: translateY(10px);
-      transform: translateY(10px);
+      pointer-events: none;
     }
   }
 }

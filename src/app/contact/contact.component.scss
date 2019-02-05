@@ -35,7 +35,7 @@
   -ms-flex-align: center;
   align-items: center;
 
-  .card {
+  .contact-link {
     font-size: 1.25rem;
     color: $text-color;
     width: 17.5rem;
@@ -47,18 +47,17 @@
     -ms-flex-align: center;
     align-items: center;
     -webkit-transition: 0.3s ease-in-out;
-    -webkit-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out;
 
     &:hover {
       color: $primary-color;
     }
-
-    svg {
+    object {
       width: 2.5rem;
       height: 2.5rem;
       margin-right: 0.625rem;
       fill: $primary-color;
+      pointer-events: none;
     }
   }
 }
