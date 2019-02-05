@@ -12,13 +12,7 @@
 
     .mat-toolbar {
       background-color: $bg-color;
-      padding-top: 6.25rem;
-      padding-bottom: 6.25rem;
-
-      #sidenav-logo {
-        width: 3.125rem;
-        height: 3.125rem;
-      }
+      color: $text-color;
     }
 
     mat-nav-list {
