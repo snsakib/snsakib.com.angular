@@ -8,7 +8,6 @@ import { AngularMaterialModule } from './angular-material.module';
 import { AboutModule } from './about/about.module';
 import { ProjectsModule } from './projects/projects.module';
 import { BlogModule } from './blog/blog.module';
-import { ContactModule } from './contact/contact.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
@@ -25,7 +24,6 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     AboutModule,
     ProjectsModule,
     BlogModule,
-    ContactModule,
     AppRoutingModule
   ],
   providers: [],

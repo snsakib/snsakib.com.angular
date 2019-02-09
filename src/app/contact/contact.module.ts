@@ -13,7 +13,7 @@ import { ContactComponent } from './contact.component';
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'contact',
+        path: '',
         component: ContactComponent,
         data: { animation: 'contactPage' }
       }
