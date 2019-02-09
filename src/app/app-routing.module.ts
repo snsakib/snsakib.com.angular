@@ -8,6 +8,10 @@ const routes: Routes = [
     path: 'projects',
     loadChildren: './projects/projects.module#ProjectsModule'
   },
+  {
+    path: 'blog',
+    loadChildren: './blog/blog.module#BlogModule'
+  },
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
   { path: '', pathMatch: 'full', redirectTo: 'about' }
 ];
