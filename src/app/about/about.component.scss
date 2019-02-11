@@ -48,10 +48,10 @@
   }
 
   #profile-picture {
-    opacity: 0;
     margin: 2rem;
-    -webkit-animation: slideDown 1.5s ease-out 0.5s forwards;
-    animation: slideDown 1.5s ease-out 0.5s forwards;
+    opacity: 0;
+    -webkit-animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+            animation: fadeIn 1.5s ease-in-out 0.5s forwards;
 
     @include breakpointMin(tablet) {
       -webkit-box-ordinal-group: 3;
@@ -72,28 +72,28 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    opacity: 0;
-    -webkit-animation: slideUp 1.5s ease-out 0.5s forwards;
-    animation: slideUp 1.5s ease-out 0.5s forwards;
 
     @include breakpointMin(tablet) {
       text-align: left;
     }
 
-    #name {
-      font-size: 1.875rem; //30px
-      color: $primary-color;
-
-      @include breakpointMin(tablet) {
-        font-size: 2.5rem;
-      }
+    #name path {
+      fill: transparent;
+      stroke: #2671f2;
+      stroke-width: 0.2;
+      stroke-dasharray: 44;
+      stroke-dashoffset: 44;
+      -webkit-animation: offset 1.5s 0.5s ease-in-out forwards,
+        fillIt 0.5s 2s ease-in-out forwards;
+      animation: offset 1.5s 0.5s ease-in-out forwards,
+        fillIt 0.5s 2s ease-in-out forwards;
     }
 
     #profession {
       font-size: 1.5rem;
       margin: 1rem 0;
 
-      @include breakpointMin(tablet) {
+      @include breakpointMin(laptop) {
         font-size: 1.8rem;
         margin: 1.5rem 0;
       }
@@ -178,80 +178,38 @@
   }
 }
 
-//Animation rules for image
-@-webkit-keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
+// Line drawing animation rules
+@-webkit-keyframes offset {
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
 
-@keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
+@keyframes offset {
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    stroke-dashoffset: 0;
   }
 }
 
-//Animation rules for intro text
-@-webkit-keyframes slideUp {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
+@-webkit-keyframes fillIt {
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    fill: #2671f2;
   }
 }
 
-@keyframes slideUp {
-  0% {
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    opacity: 0;
-  }
-
+@keyframes fillIt {
   100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
+    fill: #2671f2;
   }
 }
 
-//Animation rules for about text
+// Fade In animation rules
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
   100% {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
   100% {
     opacity: 1;
   }
