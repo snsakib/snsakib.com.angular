@@ -51,7 +51,7 @@
     margin: 2rem;
     opacity: 0;
     -webkit-animation: fadeIn 1.5s ease-in-out 0.5s forwards;
-            animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
 
     @include breakpointMin(tablet) {
       -webkit-box-ordinal-group: 3;
@@ -72,6 +72,9 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    opacity: 0;
+    -webkit-animation: fadeIn 1.5s ease-in-out 0.5s forwards;
+    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
 
     @include breakpointMin(tablet) {
       text-align: left;
@@ -83,10 +86,10 @@
       stroke-width: 0.2;
       stroke-dasharray: 44;
       stroke-dashoffset: 44;
-      -webkit-animation: offset 1.5s 0.5s ease-in-out forwards,
-        fillIt 0.5s 2s ease-in-out forwards;
-      animation: offset 1.5s 0.5s ease-in-out forwards,
-        fillIt 0.5s 2s ease-in-out forwards;
+      -webkit-animation: offset 1.5s 1s ease-in-out forwards,
+        fillIt 0.5s 2.5s ease-in-out forwards;
+              animation: offset 1.5s 1s ease-in-out forwards,
+        fillIt 0.5s 2.5s ease-in-out forwards;
     }
 
     #profession {
