@@ -8,10 +8,10 @@
 
   .sidenav {
     width: 12.5rem;
-    background-color: $bg-color;
+    background-color: $secondary-color;
 
     .mat-toolbar {
-      background-color: $bg-color;
+      background-color: $secondary-color;
       color: $text-color;
     }
 
@@ -32,14 +32,14 @@
 
         &:hover {
           color: $primary-color;
-          background-color: lighten($color: $bg-color, $amount: 5);
+          background-color: lighten($color: $secondary-color, $amount: 5);
         }
       }
     }
   }
 
   mat-sidenav-content {
-    background-color: $bg-color;
+    background-color: $secondary-color;
 
     mat-toolbar {
       @extend .responsive-x-padding;
@@ -48,11 +48,11 @@
       top: 0;
       height: $toolbar-height;
       z-index: 1;
-      background-color: $bg-color;
+      background-color: $secondary-color;
       color: $secondary-color;
 
       #menuIcon {
-        background-color: $bg-color;
+        background-color: $secondary-color;
         margin-right: 1.25rem;
         padding: 0.625rem;
         color: $secondary-color;
@@ -98,7 +98,7 @@
 
           &:hover {
             color: $primary-color;
-            background-color: lighten($color: $bg-color, $amount: 5);
+            background-color: lighten($color: $secondary-color, $amount: 5);
           }
         }
       }

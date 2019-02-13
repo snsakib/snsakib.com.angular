@@ -1,9 +1,11 @@
 @import '../../assets/styles/variables';
+@import '../../assets/styles/helpers';
 @import 'host';
 @import 'responsive-x-padding';
 
 :host {
   @extend .host;
+  @extend .bg-image;
   @extend .responsive-x-padding;
   text-align: center;
   padding-top: 3.125rem;
@@ -25,7 +27,7 @@ h1 {
   text-align: left;
   border: 1px solid transparent;
   border-radius: 3px;
-  background-color: lighten($color: $bg-color, $amount: 5);
+  background-color: lighten($color: $secondary-color, $amount: 5);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 

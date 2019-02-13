@@ -1,9 +1,11 @@
 //Colors
 $primary-color: #2671f2;
-$secondary-color: white;
-$text-color: #ccc;
-$bg-color: #0b0d0e;
-$bg-color-light: lighten($color: $bg-color, $amount: 5); //#161a1c
+$secondary-color: #0b0d0e;
+$secondary-color-light: lighten(
+  $color: $secondary-color,
+  $amount: 5
+); //#161a1c
+$text-color: white;
 
 //Dimensions
 $toolbar-height: 4.375rem;

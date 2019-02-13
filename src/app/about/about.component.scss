@@ -7,13 +7,14 @@
 
 :host {
   @extend .host;
+  @extend .bg-image;
   @extend .responsive-x-padding;
   @extend .scrollbar;
   height: calc(100vh - #{$toolbar-height});
   color: $text-color;
 
   //Scrollbar stlyles
-  scrollbar-color: $primary-color $bg-color;
+  scrollbar-color: $primary-color transparent;
 
   &::-webkit-scrollbar-thumb {
     background: $primary-color;
@@ -88,7 +89,7 @@
       stroke-dashoffset: 44;
       -webkit-animation: offset 1.5s 1s ease-in-out forwards,
         fillIt 0.5s 2.5s ease-in-out forwards;
-              animation: offset 1.5s 1s ease-in-out forwards,
+      animation: offset 1.5s 1s ease-in-out forwards,
         fillIt 0.5s 2.5s ease-in-out forwards;
     }
 

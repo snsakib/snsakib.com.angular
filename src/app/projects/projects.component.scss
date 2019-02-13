@@ -10,6 +10,7 @@ $project-height: calc(#{$img-height}+#{$footer-height});
 
 :host {
   @extend .host;
+  @extend .bg-image;
   @extend .responsive-x-padding;
   @extend .scrollbar;
 
@@ -17,7 +18,7 @@ $project-height: calc(#{$img-height}+#{$footer-height});
     background: $primary-color;
   }
 
-  scrollbar-color: $primary-color $bg-color;
+  scrollbar-color: $primary-color $secondary-color-light;
   height: calc(100vh - #{$toolbar-height});
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
@@ -95,7 +96,7 @@ $project-height: calc(#{$img-height}+#{$footer-height});
         transition: all 0.3s ease-in-out;
 
         &:hover {
-          background-color: $bg-color-light;
+          background-color: $secondary-color-light;
         }
       }
     }
