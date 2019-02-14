@@ -155,8 +155,26 @@
       color: white;
       padding: 0.2em 0.7em;
       font-weight: 500;
-      background-color: $primary-color;
       border-radius: 5px;
+      background-image: -webkit-gradient(
+        linear,
+        right bottom, left top,
+        from(#3d4e81),
+        color-stop(48%, #5753c9),
+        to(#6e7ff3)
+      );
+      background-image: linear-gradient(
+        to top left,
+        #3d4e81 0%,
+        #5753c9 48%,
+        #6e7ff3 100%
+      );
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        border-radius: 50px;
+      }
     }
   }
 

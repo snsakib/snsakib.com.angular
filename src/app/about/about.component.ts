@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   email: string = 'contact@snsakib.com';
-
   constructor() {}
 }
