@@ -87,10 +87,10 @@
       stroke-width: 0.2;
       stroke-dasharray: 44;
       stroke-dashoffset: 44;
-      -webkit-animation: offset 1.5s 1s ease-in-out forwards,
-        fillIt 0.5s 2.5s ease-in-out forwards;
-      animation: offset 1.5s 1s ease-in-out forwards,
-        fillIt 0.5s 2.5s ease-in-out forwards;
+      -webkit-animation: drawLine 3s ease-in-out forwards,
+        fillIt 1s 3s ease-in-out forwards;
+      animation: drawLine 3s ease-in-out forwards,
+        fillIt 1s 3s ease-in-out forwards;
     }
 
     #profession {
@@ -141,11 +141,6 @@
     color: $primary-color;
   }
 
-  .highlight {
-    color: white;
-    font-weight: 500;
-  }
-
   a {
     color: $primary-color;
   }
@@ -183,13 +178,13 @@
 }
 
 // Line drawing animation rules
-@-webkit-keyframes offset {
+@-webkit-keyframes drawLine {
   100% {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes offset {
+@keyframes drawLine {
   100% {
     stroke-dashoffset: 0;
   }
