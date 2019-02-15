@@ -123,59 +123,8 @@
   font-size: 1.25rem;
   padding-bottom: 3.125rem;
 
-  .punchline {
-    max-width: -webkit-max-content;
-    max-width: -moz-max-content;
-    max-width: max-content;
-    border-top: 1px solid $primary-color;
-    border-bottom: 1px solid $primary-color;
-    padding: 20px 10px;
-    margin: 20px auto;
-    text-align: center;
-  }
-
-  h1 {
-    margin: 0.625rem 0;
-    font-size: 1.875rem;
-    font-weight: 400;
-    color: $primary-color;
-  }
-
-  a {
-    color: $primary-color;
-  }
-
   p {
     margin: 1.5625rem 0;
-  }
-
-  #cta {
-    #hireMe {
-      text-decoration: none;
-      color: white;
-      padding: 0.2em 0.7em;
-      font-weight: 500;
-      border-radius: 5px;
-      background-image: -webkit-gradient(
-        linear,
-        right bottom, left top,
-        from(#3d4e81),
-        color-stop(48%, #5753c9),
-        to(#6e7ff3)
-      );
-      background-image: linear-gradient(
-        to top left,
-        #3d4e81 0%,
-        #5753c9 48%,
-        #6e7ff3 100%
-      );
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-
-      &:hover {
-        border-radius: 50px;
-      }
-    }
   }
 
   .contact-link {
