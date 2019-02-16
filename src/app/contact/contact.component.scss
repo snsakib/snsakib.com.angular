@@ -38,7 +38,7 @@
 
   .contact-link {
     font-size: 1.25rem;
-    color: $text-color;
+    text-decoration: none;
     width: 17.5rem;
     margin: 1.25rem 0;
     display: -webkit-box;
@@ -47,12 +47,23 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
+
+    span {
+      @extend .highlight-link;
+      background-size: 100% 1px;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
 
     &:hover {
-      color: $primary-color;
+      span {
+        background-size: 100% 100%;
+        color: $secondary-color;
+      }
     }
+
     svg {
       width: 2.5rem;
       height: 2.5rem;
