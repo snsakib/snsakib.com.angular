@@ -1,4 +1,5 @@
 @import '../../assets/styles/variables';
+@import '../../assets/styles/helpers';
 @import 'host';
 @import 'mixins';
 @import 'responsive-x-padding';
@@ -6,35 +7,24 @@
 .sidenav-container {
   height: 100vh;
 
+  .nav-link {
+    color: $text-color;
+    font-size: 1.25rem;
+
+    &.active,
+    &:hover {
+      span {
+        @extend .text-gradient;
+      }
+    }
+  }
+
   .sidenav {
     width: 12.5rem;
     background-color: $secondary-color;
 
-    .mat-toolbar {
-      background-color: $secondary-color;
-      color: $text-color;
-    }
-
     mat-nav-list {
-      a {
-        color: $secondary-color;
-        font-size: 1.25rem;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out;
-
-        &.active {
-          color: $primary-color;
-          border-top: 1px solid $primary-color;
-          border-bottom: 1px solid $primary-color;
-        }
-
-        &:hover {
-          color: $primary-color;
-          background-color: lighten($color: $secondary-color, $amount: 5);
-        }
-      }
+      margin-top: $toolbar-height;
     }
   }
 
@@ -55,7 +45,7 @@
         background-color: $secondary-color;
         margin-right: 1.25rem;
         padding: 0.625rem;
-        color: $secondary-color;
+        color: $text-color;
         font-size: 1.875rem;
         border: none;
 
@@ -82,25 +72,6 @@
         display: flex;
         padding: 0;
         margin-left: auto;
-
-        a {
-          height: $toolbar-height;
-          color: $text-color;
-          font-size: 1.25rem;
-          border-bottom: 2px solid transparent;
-          -webkit-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-
-          &.active {
-            color: $primary-color;
-            border-bottom: 2px solid $primary-color;
-          }
-
-          &:hover {
-            color: $primary-color;
-            background-color: lighten($color: $secondary-color, $amount: 5);
-          }
-        }
       }
     }
 

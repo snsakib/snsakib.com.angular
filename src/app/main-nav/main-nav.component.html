@@ -8,9 +8,6 @@
     mode="push"
     opened="false"
   >
-    <mat-toolbar>
-      Menu
-    </mat-toolbar>
     <mat-nav-list>
       <a
         *ngFor="let page of pages"
@@ -18,7 +15,8 @@
         routerLink="{{ page.routerLink }}"
         routerLinkActive="active"
         (click)="drawer.toggle()"
-        >{{ page.linkText }}</a
+        class="nav-link"
+        ><span>{{ page.linkText }}</span></a
       >
     </mat-nav-list>
   </mat-sidenav>
@@ -69,8 +67,9 @@
           mat-list-item
           routerLink="{{ page.routerLink }}"
           routerLinkActive="active"
-          >{{ page.linkText }}</a
-        >
+          class="nav-link"
+          ><span>{{ page.linkText }}</span>
+        </a>
       </mat-nav-list>
     </mat-toolbar>
 
