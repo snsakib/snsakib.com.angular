@@ -50,7 +50,10 @@
 
     span {
       @extend .highlight-link;
+      height: 100%;
+      padding: 0.4em 0.3em;
       background-size: 100% 1px;
+      background-position: left 0 bottom 0;
 
       &:hover {
         color: $text-color;
