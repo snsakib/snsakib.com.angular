@@ -16,7 +16,7 @@
 }
 
 .highlight-text {
-  font-weight: 900;
+  font-weight: 500;
   color: white;
 }
 
@@ -29,7 +29,7 @@
   box-decoration-break: clone;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
   background-image: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
-  background-size: 100% 0.2em;
+  background-size: 100% 0.1em;
   background-repeat: no-repeat;
   background-position: left 0 bottom 5%;
   -webkit-transition: all 0.3s ease-in-out;

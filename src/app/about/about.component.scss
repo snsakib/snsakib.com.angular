@@ -5,6 +5,8 @@
 @import 'scrollbar';
 @import 'responsive-x-padding';
 
+$width: 400px;
+
 :host {
   @extend .host;
   @extend .bg-image;
@@ -14,10 +16,11 @@
   color: $text-color;
 
   //Scrollbar stlyles
-  scrollbar-color: $primary-color transparent;
+  scrollbar-color: #ff571a transparent;
 
   &::-webkit-scrollbar-thumb {
-    background: $primary-color;
+    background: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
+    background: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
   }
 
   &::-webkit-scrollbar {
@@ -27,156 +30,134 @@
 
 #home {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-
-  @include breakpointMin(tablet) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-
-  #profile-picture {
-    margin: 2rem;
-    opacity: 0;
-    -webkit-animation: fadeIn 1.5s ease-in-out 0.5s forwards;
-    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
-
-    @include breakpointMin(tablet) {
-      -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-      order: 2;
-    }
-  }
 
   #intro {
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    opacity: 0;
-    -webkit-animation: fadeIn 1.5s ease-in-out 0.5s forwards;
-    animation: fadeIn 1.5s ease-in-out 0.5s forwards;
-
-    @include breakpointMin(tablet) {
-      text-align: left;
+    @media (min-width: 550px) {
+      display: grid;
+      grid-template-columns: 150px auto;
+      grid-column-gap: 2rem;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
     }
 
-    #name path {
-      fill: transparent;
-      stroke: #2671f2;
-      stroke-width: 0.2;
-      stroke-dasharray: 44;
-      stroke-dashoffset: 44;
-      -webkit-animation: drawLine 3s ease-in-out forwards,
-        fillIt 1s 3s ease-in-out forwards;
-      animation: drawLine 3s ease-in-out forwards,
-        fillIt 1s 3s ease-in-out forwards;
+    #profile-picture {
+      margin: 2rem 0;
     }
 
-    #profession {
-      font-size: 1.5rem;
-      margin: 1rem 0;
+    #general-info {
+      #name {
+        font-size: 1.9rem;
+        font-weight: 500;
 
-      @include breakpointMin(laptop) {
-        font-size: 1.8rem;
-        margin: 1.5rem 0;
+        @include breakpointMin(tablet) {
+          font-size: 2.2rem;
+        }
       }
-    }
 
-    #punchline {
-      font-size: 1.2rem;
-      line-height: 1.3rem;
-      letter-spacing: 1px;
-      font-style: italic;
+      #profession {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
 
-      @include breakpointMin(tablet) {
+      #tagline {
         font-size: 1.3rem;
-        line-height: 1.8rem;
       }
     }
   }
 }
 
 #about {
-  line-height: 2.1875rem;
-  letter-spacing: 1px;
-  font-size: 1.25rem;
-  padding-bottom: 3.125rem;
+  line-height: 2em;
+  font-size: 1.3rem;
+  margin: 2rem 0 5rem 0;
 
-  p {
-    margin: 1.5625rem 0;
-  }
+  #page-links {
+    max-width: $width;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
-  .contact-link {
-    height: 3rem;
-    width: 3rem;
-    display: inline-block;
-    margin: 0 0.625rem;
-    -webkit-transform: translateY(10px);
-    transform: translateY(10px);
-
-    svg {
-      height: 3rem;
-      width: 3rem;
-      fill: $primary-color;
-      pointer-events: none;
+    .page-link {
+      @extend .highlight-link;
+      padding: 0.2em 0.5em;
     }
   }
-}
 
-// Line drawing animation rules
-@-webkit-keyframes drawLine {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
+  #call-to-action {
+    @include breakpointMin(laptop) {
+      display: grid;
+      grid-template-columns: 25rem auto;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
 
-@keyframes drawLine {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
+    #hire-me {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      max-width: $width;
+      height: 2.5rem;
+      font-size: 1.3rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: $secondary-color;
+      border-radius: 3px;
+      margin-bottom: 2rem;
+      background-image: -webkit-gradient(
+        linear,
+        left top, right bottom,
+        from(#f9d423),
+        to(#f83600)
+      );
+      background-image: linear-gradient(
+        to bottom right,
+        #f9d423 0%,
+        #f83600 100%
+      );
 
-@-webkit-keyframes fillIt {
-  100% {
-    fill: #2671f2;
-  }
-}
+      @include breakpointMin(laptop) {
+        margin-bottom: 0;
+      }
+    }
 
-@keyframes fillIt {
-  100% {
-    fill: #2671f2;
-  }
-}
+    #contact-links {
+      max-width: $width;
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      grid-column-gap: 3rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
 
-// Fade In animation rules
-@-webkit-keyframes fadeIn {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
+      @include breakpointMin(laptop) {
+        grid-column-gap: 1.3rem;
+      }
+
+      .contact-link {
+        height: 3rem;
+        width: 3rem;
+
+        @include breakpointMin(laptop) {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+
+        svg {
+          pointer-events: none;
+          margin: 5px;
+        }
+      }
+    }
   }
 }
