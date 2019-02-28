@@ -1,55 +1,124 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/helpers';
 @import 'host';
+@import 'scrollbar';
 @import 'responsive-x-padding';
 
 :host {
   @extend .host;
   @extend .bg-image;
   @extend .responsive-x-padding;
-  text-align: center;
-  padding-top: 3.125rem;
-  padding-bottom: 3.125rem;
-}
+  @extend .scrollbar;
+  height: calc(100vh - #{$toolbar-height});
 
-h1 {
-  color: $primary-color;
-  font-size: 1.875rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  margin: 0 0 3.125rem 0;
-}
+  //Scrollbar stlyles
+  scrollbar-color: #ff571a transparent;
 
-.post {
-  max-width: 43.75rem;
-  padding: 0.625rem;
-  margin: 0 auto 1.875rem;
-  text-align: left;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  background-color: lighten($color: $secondary-color, $amount: 5);
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-
-  h1 {
-    font-size: 1.25rem;
-    margin: 0 0 0.625rem 0;
-    font-weight: 400;
+  &::-webkit-scrollbar-thumb {
+    background: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
+    background: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
   }
 
-  p {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    font-size: 1.125rem;
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+}
+
+#blog {
+  // border: 1px solid red;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+#heading {
+  // border: 1px solid red;
+  color: $text-color;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  @include breakpointMin(tablet) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+#filter {
+  margin: 2rem 0;
+
+  @include breakpointMin(tablet) {
+    width: 17.5rem;
+    margin: 2rem 0 2rem 2rem;
+  }
+
+  #postFilter {
+    border: 1px solid $text-color;
+    width: 100%;
+    height: 2rem;
+    background-color: $secondary-color;
     color: $text-color;
+    // font-size: 1rem;
   }
+}
 
-  &:hover {
-    cursor: pointer;
-    border: 1px solid $primary-color;
+#posts {
+  // border: 1px solid red;
+
+  .post {
+    margin: 0 0 2rem 0;
+    background-color: lighten($color: $secondary-color, $amount: 5);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    .post-link {
+      display: block;
+      padding: 1rem;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+
+      h1 {
+        font-size: 1.25rem;
+        margin: 0 0 1rem 0;
+      }
+
+      p {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        font-size: 1rem;
+        color: $text-color;
+      }
+
+      &:hover {
+        border: 1px solid #ff571a;
+      }
+    }
   }
+}
+
+#pagination {
+  height: 3rem;
+  background-color: gray;
 }

@@ -7,7 +7,9 @@ import { Component } from "@angular/core";
 })
 export class BlogComponent {
   //TODO
-  //Move this data to firebase
+  //Move this data to 
+  postFilterOptions = ['Angular', 'JavaScript', 'TypeScript'];
+
   posts = [
     {
       title: "Angular Reactive Form",
