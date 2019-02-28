@@ -36,7 +36,7 @@
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
 
@@ -91,10 +91,8 @@
     font-style: italic;
   }
 
-  ul {
-    li {
-      margin: 1rem 0;
-      line-height: 1.2rem;
-    }
+  p {
+    margin: 1rem 0;
+    line-height: 1.2rem;
   }
 }
