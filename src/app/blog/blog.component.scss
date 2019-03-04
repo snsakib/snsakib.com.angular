@@ -25,13 +25,11 @@
 }
 
 #blog {
-  // border: 1px solid red;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 #heading {
-  // border: 1px solid red;
   color: $text-color;
   font-size: 1.2rem;
   line-height: 1.5rem;
@@ -42,9 +40,7 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  justify-content: center; // add 'space-between' after filter is added
 
   @include breakpointMin(tablet) {
     -webkit-box-orient: horizontal;
@@ -71,15 +67,13 @@
     height: 2rem;
     background-color: $secondary-color;
     color: $text-color;
-    // font-size: 1rem;
   }
 }
 
 #posts {
-  // border: 1px solid red;
 
   .post {
-    margin: 0 0 2rem 0;
+    margin: 2rem 0;
     background-color: lighten($color: $secondary-color, $amount: 5);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;

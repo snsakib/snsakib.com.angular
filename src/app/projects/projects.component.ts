@@ -13,7 +13,7 @@ export class ProjectsComponent {
       category: 'Website',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
       liveDemoLink: '#',
-      imgPath: 'http://via.placeholder.com/640x360',
+      imgPath: 'http://placeimg.com/560/320/nature/grayscale',
       imgAlt: 'Screenshot of the project'
     },
     {
@@ -21,7 +21,7 @@ export class ProjectsComponent {
       category: 'Website',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
       liveDemoLink: '#',
-      imgPath: 'http://via.placeholder.com/640x460',
+      imgPath: 'http://placeimg.com/560/320/arch/grayscale',
       imgAlt: 'Screenshot of the project'
     },
     {
@@ -29,13 +29,12 @@ export class ProjectsComponent {
       category: 'Website',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
       liveDemoLink: '#',
-      imgPath: 'http://via.placeholder.com/640x560',
+      imgPath: 'http://placeimg.com/560/320/tech/grayscale',
       imgAlt: 'Screenshot of the project'
     }
   ];
   slideIndex = 1;
   slides = document.getElementsByClassName('mySlides');
-  dots = document.getElementsByClassName('dot');
 
   showSlides(n) {
     if (n > this.slides.length) {

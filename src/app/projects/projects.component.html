@@ -1,17 +1,41 @@
 <section id="projects">
   <section class="slideshow-container">
-    <div class="mySlides fade" *ngFor="let project of projects; let i = index">
+    <a
+      href="{{ project.liveDemoLink }}"
+      class="mySlides fade"
+      *ngFor="let project of projects; let i = index"
+    >
       <img src="{{ project.imgPath }}" style="width:100%; height: 100%;" />
       <h1 class="project-title text-gradient">{{ project.title }}</h1>
       <h2 class="project-category">{{ project.category }}</h2>
       <div class="numberText">{{ i + 1 }} / {{ projects.length }}</div>
-    </div>
+    </a>
 
     <a class="prev" (click)="plusSlides(-1)">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M12.586 27.414l-10-10a2 2 0 0 1 0-2.828l10-10a2 2 0 1 1 2.828 2.828L8.828 14H28a2 2 0 1 1 0 4H8.828l6.586 6.586c.39.39.586.902.586 1.414s-.195 1.024-.586 1.414a2 2 0 0 1-2.828 0z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+        <path
+          d="M12.586 27.414l-10-10a2 2 0 0 1 0-2.828l10-10a2 2 0 1 1 2.828 2.828L8.828 14H28a2 2 0 1 1 0 4H8.828l6.586 6.586c.39.39.586.902.586 1.414s-.195 1.024-.586 1.414a2 2 0 0 1-2.828 0z"
+        />
+      </svg>
     </a>
     <a class="next" (click)="plusSlides(1)">
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path d="M19.414 27.414l10-10a2 2 0 0 0 0-2.828l-10-10a2 2 0 1 0-2.828 2.828L23.172 14H4a2 2 0 1 0 0 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 0 0 2.828 0z"/></svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        class="arrow"
+      >
+        <path
+          d="M19.414 27.414l10-10a2 2 0 0 0 0-2.828l-10-10a2 2 0 1 0-2.828 2.828L23.172 14H4a2 2 0 1 0 0 4h19.172l-6.586 6.586c-.39.39-.586.902-.586 1.414s.195 1.024.586 1.414a2 2 0 0 0 2.828 0z"
+        />
+      </svg>
     </a>
+
+    <div class="user-instruction">
+      <p class="mobile-tablet-instruction">
+        Double tap to view or swipe to navigate
+      </p>
+      <p class="laptop-instruction">Click on the image to view live demo</p>
+    </div>
   </section>
 </section>
