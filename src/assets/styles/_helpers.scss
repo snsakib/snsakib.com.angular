@@ -1,4 +1,5 @@
 @import './variables';
+@import 'scrollbar';
 
 //Helper classes for stylings
 
@@ -38,5 +39,19 @@
   &:hover {
     background-size: 100% 100%;
     color: $secondary-color;
+  }
+}
+
+.custom-scrollbar {
+  @extend .scrollbar;
+
+  scrollbar-color: black transparent;
+
+  &::-webkit-scrollbar-thumb {
+    background: black;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
   }
 }

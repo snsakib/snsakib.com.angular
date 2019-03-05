@@ -1,27 +1,14 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/helpers';
 @import 'host';
-@import 'scrollbar';
 @import 'responsive-x-padding';
 
 :host {
   @extend .host;
   @extend .bg-image;
   @extend .responsive-x-padding;
-  @extend .scrollbar;
+  @extend .custom-scrollbar;
   height: calc(100vh - #{$toolbar-height});
-
-  //Scrollbar stlyles
-  scrollbar-color: #ff571a transparent;
-
-  &::-webkit-scrollbar-thumb {
-    background: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
-    background: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
-  }
-
-  &::-webkit-scrollbar {
-    width: 3px;
-  }
 }
 
 #blog {
@@ -40,7 +27,9 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  justify-content: center; // add 'space-between' after filter is added
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; // add 'space-between' after filter is added
 
   @include breakpointMin(tablet) {
     -webkit-box-orient: horizontal;
@@ -71,7 +60,6 @@
 }
 
 #posts {
-
   .post {
     margin: 2rem 0;
     background-color: lighten($color: $secondary-color, $amount: 5);

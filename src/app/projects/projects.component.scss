@@ -1,7 +1,6 @@
 @import '../../assets/styles/variables';
 @import '../../assets/styles/helpers';
 @import 'host';
-@import 'scrollbar';
 @import 'mixins';
 @import 'responsive-x-padding';
 
@@ -9,13 +8,6 @@
   @extend .host;
   @extend .bg-image;
   @extend .responsive-x-padding;
-  @extend .scrollbar;
-
-  &::-webkit-scrollbar-thumb {
-    background: $primary-color;
-  }
-
-  scrollbar-color: $primary-color $secondary-color-light;
   height: calc(100vh - #{$toolbar-height});
 }
 
