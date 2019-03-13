@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "git": "git add --all && git commit -m \"remove firebase hosting\" && git push",
+    "git": "git add --all && git commit -m \"add 404 file to docs\" && git push",
     "stats": "webpack-bundle-analyzer dist/portfolioWebsite/stats.json",
     "all": "npm run build && npm run git"
   },
