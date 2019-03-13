@@ -4,14 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod=true",
+    "build": "ng build --prod --output-path docs --base-href /portfolioWebsite/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "firebase": "firebase deploy",
-    "git": "git add --all && git commit -m \"update website\" && git push",
+    "git": "git add --all && git commit -m \"remove firebase hosting\" && git push",
     "stats": "webpack-bundle-analyzer dist/portfolioWebsite/stats.json",
-    "all": "npm run build && npm run firebase && npm run git"
+    "all": "npm run build && npm run git"
   },
   "private": true,
   "dependencies": {
