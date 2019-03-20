@@ -16,7 +16,6 @@
   height: 100%;
 }
 
-/* Slideshow container */
 .slideshow-container {
   width: 100%;
   height: 100%;
@@ -27,7 +26,7 @@
 .mySlides {
   color: $text-color;
   width: 100%;
-  height: 100%;
+  height: 80%;
   border: 1px solid transparent;
   border-radius: 3px;
   overflow: hidden;
@@ -39,13 +38,9 @@
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  @include breakpointMin(laptop) {
+  @include breakpointMin(tablet) {
     width: 35rem;
     height: 20rem;
-  }
-
-  &:hover {
-    border: 1px solid darkorange;
   }
 }
 
@@ -69,7 +64,79 @@
   position: absolute;
   top: 60%;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 500;
+  color: $secondary-color;
+}
+
+#links {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 450px) {
+    width: 60%;
+  }
+
+  #demo-link,
+  #case-link {
+    display: block;
+    color: $secondary-color;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.3em 1em;
+    border-radius: 3px;
+    background-image: -webkit-gradient(
+      linear,
+      left top, right bottom,
+      from(#f9d423),
+      to(#f83600)
+    );
+    background-image: linear-gradient(
+      to bottom right,
+      #f9d423 0%,
+      #f83600 100%
+    );
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-image: -webkit-gradient(linear, right bottom, left top, from(#f9d423), to(#f83600));
+      background-image: linear-gradient(to top left, #f9d423 0%, #f83600 100%);
+    }
+  }
+
+  #case-link {
+    color: darkorange;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+/* Number text (1/3 etc) */
+.numberText {
+  color: $secondary-color;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Next & previous buttons */
@@ -77,13 +144,13 @@
 .next {
   display: none;
 
-  @include breakpointMin(laptop) {
+  @include breakpointMin(tablet) {
     display: inline-block;
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    padding: 16px;
+    padding: 10px;
     margin-top: -22px;
     -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
@@ -106,38 +173,18 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Number text (1/3 etc) */
-.numberText {
-  color: $text-color;
-  font-size: 1rem;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 .user-instruction {
-  color: black;
+  color: $text-color;
   text-align: center;
   position: absolute;
   width: 100%;
-  top: 90%;
+  top: 95%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 
-  .laptop-instruction {
+  @include breakpointMin(tablet) {
     display: none;
-  }
-
-  @include breakpointMin(laptop) {
-    .mobile-tablet-instruction {
-      display: none;
-    }
-
-    .laptop-instruction {
-      display: block;
-    }
   }
 }
 

@@ -1,15 +1,20 @@
 <section id="projects">
   <section class="slideshow-container">
-    <a
-      href="{{ project.liveDemoLink }}"
+    <section
+      (swipeleft)="plusSlides(1)"
+      (swiperight)="plusSlides(-1)"
       class="mySlides fade"
       *ngFor="let project of projects; let i = index"
     >
       <img src="{{ project.imgPath }}" style="width:100%; height: 100%;" />
       <h1 class="project-title text-gradient">{{ project.title }}</h1>
       <h2 class="project-category">{{ project.category }}</h2>
+      <section id="links">
+        <a href="#" id="demo-link">LIVE DEMO</a>
+        <a href="#" id="case-link">CASE STUDY</a>
+      </section>
       <div class="numberText">{{ i + 1 }} / {{ projects.length }}</div>
-    </a>
+    </section>
 
     <a class="prev" (click)="plusSlides(-1)">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
@@ -32,10 +37,9 @@
     </a>
 
     <div class="user-instruction">
-      <p class="mobile-tablet-instruction">
-        Double tap to view or swipe to navigate
+      <p>
+        Swipe to navigate
       </p>
-      <p class="laptop-instruction">Click on the image to view live demo</p>
     </div>
   </section>
 </section>

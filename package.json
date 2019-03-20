@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --output-path docs --base-href /portfolio-website/",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "git": "git add --all && git commit -m \"add 404 file to docs\" && git push",
+    "git": "git add --all && git commit -m \"add hammerjs\" && git push",
     "stats": "webpack-bundle-analyzer dist/portfolioWebsite/stats.json",
     "all": "npm run build && npm run git"
   },
@@ -26,6 +26,7 @@
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
+    "hammerjs": "^2.0.8",
     "reset-css": "^4.0.1",
     "rxjs": "~6.3.3",
     "skb-scss": "^3.0.3",
