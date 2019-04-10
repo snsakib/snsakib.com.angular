@@ -8,12 +8,24 @@
     >
       <img src="{{ project.imgPath }}" style="width:100%; height: 100%;" />
       <h1 class="project-title text-gradient">{{ project.title }}</h1>
-      <h2 class="project-category">{{ project.category }}</h2>
+      <!-- <h2 class="project-category">{{ project.category }}</h2> -->
       <section id="links">
-        <a href="#" id="demo-link">LIVE DEMO</a>
-        <a href="#" id="case-link">CASE STUDY</a>
+        <a
+          href="{{ project.liveDemo }}"
+          id="demo-link"
+          target="_blanck"
+          rel="noopener"
+          >LIVE DEMO</a
+        >
+        <a
+          href="{{ project.caseStudy }}"
+          id="case-link"
+          target="_blanck"
+          rel="noopener"
+          >CASE STUDY</a
+        >
       </section>
-      <div class="numberText">{{ i + 1 }} / {{ projects.length }}</div>
+      <!-- <div class="numberText">{{ i + 1 }} / {{ projects.length }}</div> -->
     </section>
 
     <a class="prev" (click)="plusSlides(-1)">
