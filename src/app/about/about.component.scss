@@ -144,6 +144,10 @@ $width: 400px;
         height: 3rem;
         width: 3rem;
 
+        &:focus {
+          outline: none;
+        }
+
         @include breakpointMin(laptop) {
           height: 2.5rem;
           width: 2.5rem;
@@ -153,10 +157,6 @@ $width: 400px;
           &:hover {
             height: 3rem;
             width: 3rem;
-          }
-
-          &:focus {
-            outline: none;
           }
         }
 
