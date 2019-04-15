@@ -151,12 +151,12 @@ $width: 400px;
         @include breakpointMin(laptop) {
           height: 2.5rem;
           width: 2.5rem;
-          -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
+          -webkit-transition: all 0.2s linear;
+          transition: all 0.2s linear;
 
           &:hover {
-            height: 3rem;
-            width: 3rem;
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
           }
         }
 
