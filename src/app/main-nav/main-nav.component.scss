@@ -20,11 +20,24 @@
   }
 
   .sidenav {
-    width: 12.5rem;
+    width: 15.625rem; // 250px
     background-color: $secondary-color;
+
+    mat-toolbar {
+      background-color: $secondary-color;
+      padding-left: 3rem;
+      svg {
+        width: 2.1875rem;
+        height: 2.1875rem;
+      }
+    }
 
     mat-nav-list {
       margin-top: $toolbar-height;
+
+      .nav-link {
+        padding-left: 2rem;
+      }
     }
   }
 
@@ -58,12 +71,6 @@
         width: 2.1875rem;
         height: 2.1875rem;
         display: block;
-
-        object {
-          width: 2.1875rem;
-          height: 2.1875rem;
-          pointer-events: none;
-        }
       }
 
       mat-nav-list {
