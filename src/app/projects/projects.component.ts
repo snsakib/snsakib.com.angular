@@ -10,7 +10,7 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Agency',
-      category: 'Corporate landing page',
+      category: 'Corporate website landing page',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
@@ -21,7 +21,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Agency',
-      category: 'Corporate landing page',
+      category: 'Corporate website landing page',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
@@ -32,7 +32,7 @@ export class ProjectsComponent {
     },
     {
       title: 'Agency',
-      category: 'Corporate landing page',
+      category: 'Corporate website landing page',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
