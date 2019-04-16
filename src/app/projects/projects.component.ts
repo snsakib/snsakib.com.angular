@@ -9,36 +9,41 @@ export class ProjectsComponent {
   //list of projects
   projects = [
     {
-      title: 'Agency Website',
-      category: 'Website',
+      title: 'Agency',
+      category: 'Corporate landing page',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
-      liveDemo: '#',
+      liveDemo: 'https://www.snsakib.com/agency-landing-page',
       caseStudy: '#',
-      imgPath: 'http://placeimg.com/560/320/nature/grayscale',
+      imgPath: 'assets/images/projects/uni.jpg',
       imgAlt: 'Screenshot of the project'
     },
     {
-      title: 'project Title 2',
-      category: 'Website',
+      title: 'Agency',
+      category: 'Corporate landing page',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
-      liveDemo: 'https://www.snsakib.com/uni',
+      liveDemo: 'https://www.snsakib.com/agency-landing-page',
       caseStudy: '#',
-      imgPath: 'http://placeimg.com/560/320/arch/grayscale',
+      imgPath: 'assets/images/projects/uni.jpg',
       imgAlt: 'Screenshot of the project'
     },
     {
-      title: 'Project Title 3',
-      category: 'Website',
+      title: 'Agency',
+      category: 'Corporate landing page',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
-      liveDemo: '#',
+      liveDemo: 'https://www.snsakib.com/agency-landing-page',
       caseStudy: '#',
-      imgPath: 'http://placeimg.com/560/320/tech/grayscale',
+      imgPath: 'assets/images/projects/uni.jpg',
       imgAlt: 'Screenshot of the project'
     }
   ];
 
-  ngAfterViewInit() {
-  }
+  ngAfterViewInit() {}
 
   constructor() {}
 }
