@@ -36,28 +36,8 @@ export class ProjectsComponent {
       imgAlt: 'Screenshot of the project'
     }
   ];
-  slideIndex = 1;
-  slides = document.getElementsByClassName('mySlides');
-
-  showSlides(n) {
-    if (n > this.slides.length) {
-      this.slideIndex = 1;
-    }
-    if (n < 1) {
-      this.slideIndex = this.slides.length;
-    }
-    for (let i = 0; i < this.slides.length; i++) {
-      (<HTMLElement>this.slides[i]).style.display = 'none';
-    }
-    (<HTMLElement>this.slides[this.slideIndex - 1]).style.display = 'block';
-  }
-
-  plusSlides(n) {
-    this.showSlides((this.slideIndex += n));
-  }
 
   ngAfterViewInit() {
-    this.showSlides(this.slideIndex);
   }
 
   constructor() {}
