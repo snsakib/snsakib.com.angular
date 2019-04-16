@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 // Module for router configuration
 import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 
 // Components
 import { ProjectsComponent } from './projects.component';
@@ -11,6 +12,7 @@ import { ProjectsComponent } from './projects.component';
   declarations: [ProjectsComponent],
   imports: [
     CommonModule,
+    MatCardModule,
     RouterModule.forChild([
       {
         path: '',
