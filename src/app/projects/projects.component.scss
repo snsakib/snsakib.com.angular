@@ -11,6 +11,10 @@
   min-height: calc(100vh - #{$toolbar-height});
 }
 
+#projects {
+  padding-bottom: 5rem;
+}
+
 #cards-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,5 +135,44 @@ mat-card {
         border: 1px solid transparent;
       }
     }
+  }
+}
+
+.github-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 17.5rem;
+  height: 1.875rem; // 30px
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  margin: 2rem auto 0;
+  border: 1px solid darkorange;
+  color: darkorange;
+  font-weight: 400;
+
+  &:hover {
+    color: $secondary-color;
+    font-weight: 500;
+    border: 1px solid transparent;
+    background-image: -webkit-gradient(
+      linear,
+      left top, right bottom,
+      from(#f83600),
+      to(#f9d423)
+    );
+    background-image: linear-gradient(
+      to bottom right,
+      #f83600 0%,
+      #f9d423 100%
+    );
   }
 }
