@@ -1,20 +1,22 @@
 <section id="projects">
-  <mat-card *ngFor="let project of projects">
-    <img
-      mat-card-image
-      src="{{ project.imgPath }}"
-      alt="{{ project.imgAlt }}"
-    />
-    <mat-card-content>
-      <h1 class="project-title text-gradient">{{ project.title }}</h1>
-      <h2 class="project-category highlight-text">{{ project.category }}</h2>
-      <p class="project-description">
-        {{ project.description }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a href="{{ project.liveDemo }}" class="demo-btn">LIVE DEMO</a>
-      <a href="{{ project.caseStudy }}" class="case-study-btn">CASE STUDY</a>
-    </mat-card-actions>
-  </mat-card>
+  <section id="cards-wrapper">
+    <mat-card *ngFor="let project of projects">
+      <img
+        mat-card-image
+        src="{{ project.imgPath }}"
+        alt="{{ project.imgAlt }}"
+      />
+      <mat-card-content>
+        <h1 class="project-title text-gradient">{{ project.title }}</h1>
+        <h2 class="project-category highlight-text">{{ project.category }}</h2>
+        <p class="project-description">
+          {{ project.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a href="{{ project.liveDemo }}" class="demo-btn">LIVE DEMO</a>
+        <a href="{{ project.caseStudy }}" class="case-study-btn">CASE STUDY</a>
+      </mat-card-actions>
+    </mat-card>
+  </section>
 </section>
