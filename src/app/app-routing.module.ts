@@ -11,7 +11,7 @@ const routes: Routes = [
   {
     path: 'projects/agency-landing-page/case-study',
     loadChildren:
-      './agency-case-study/agency-case-study.module#AgencyCaseStudyModule'
+      './case-studies/agency-case-study/agency-case-study.module#AgencyCaseStudyModule'
   },
   {
     path: 'blog',
