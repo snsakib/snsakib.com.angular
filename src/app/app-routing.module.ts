@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: './projects/projects.module#ProjectsModule'
   },
   {
-    path: 'projects/agency-landing-page/case-study',
+    path: 'projects/agency/case-study',
     loadChildren:
       './case-studies/agency-case-study/agency-case-study.module#AgencyCaseStudyModule'
   },
