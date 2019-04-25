@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
       {
         path: '',
         component: AgencyCaseStudyComponent,
-        data: { animation: 'caseStudyPage' }
+        data: { animation: 'agencyCaseStudyPage' }
       }
     ])
   ]
