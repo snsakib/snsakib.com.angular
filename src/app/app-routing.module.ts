@@ -9,6 +9,11 @@ const routes: Routes = [
     loadChildren: './projects/projects.module#ProjectsModule'
   },
   {
+    path: 'case-study',
+    loadChildren:
+      './agency-case-study/agency-case-study.module#AgencyCaseStudyModule'
+  },
+  {
     path: 'blog',
     loadChildren: './blog/blog.module#BlogModule'
   },
