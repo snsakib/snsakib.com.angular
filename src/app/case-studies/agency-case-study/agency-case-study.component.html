@@ -1,151 +1,180 @@
-<section class="stackedit">
-  <div class="stackedit__left">
-    <div class="stackedit__toc">
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li>
-          <a href="#technologies--tools-used"># Technologies & Tools Used</a>
-        </li>
-        <li>
-          <a href="#why-did-i-do-this-project">Why Did I Do This Project?</a>
-        </li>
-        <li><a href="#challenges">Challenges</a></li>
-        <li>
-          <a href="#development-process">Development Process</a>
-          <ul>
-            <li><a href="#phase-1-planning">Phase 1: Planning</a></li>
-            <li><a href="#phase-2-coding">Phase 2: Coding</a></li>
-            <li><a href="#phase-3-refactoring">Phase 3: Refactoring</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#my-top-takeaways">My Top Takeaways</a>
-          <ul>
-            <li><a href="#angular-ecosystem">Angular Ecosystem</a></li>
-            <li><a href="#responsive-images">Responsive Images</a></li>
-            <li><a href="#persistency">Persistency</a></li>
-          </ul>
-        </li>
-        <li><a href="#future-scope">Future Scope</a></li>
-        <li><a href="#credits">Credits</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="stackedit__right">
-    <div class="stackedit__html">
-      <h1 id="overview">Overview</h1>
-      <p>
-        <strong>"Agency"</strong> is a corporate website landing page. It is
-        fully responsive in design. This website is developed as a personal
-        project of mine to refurbish my front-end web development skills.
-      </p>
-      <h1 id="technologies--tools-used"># Technologies &amp; Tools Used</h1>
-      <p>
-        Angular, Angular Material, HTML, CSS, Sass, JavaScript ES6, TypeScript,
-        Git, GitHub, Zeplin, PhotoShop
-      </p>
-      <h1 id="why-did-i-do-this-project">Why Did I Do This Project?</h1>
-      <p>
-        After grasping the fundamentals of front-end web development, I decided
-        to sharpen my skills by working on some projects. Therefore, I came up
-        with the idea to develop this responsive website.
-      </p>
-      <h1 id="challenges">Challenges</h1>
-      <p>
+<img
+  class="banner-image"
+  src="assets/images/projects/agency/agency-screenshot-700.jpg"
+  alt=""
+  srcset="
+    assets/images/projects/agency/agency-screenshot-450.jpg   450w,
+    assets/images/projects/agency/agency-screenshot-700.jpg   700w,
+    assets/images/projects/agency/agency-screenshot-1000.jpg 1000w
+  "
+  sizes="100vw"
+/>
+<!-- <nav class="table-of-contents">
+    <h1>Table of contents</h1>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li>
+        <a href="#technologies">Technologies & Tools Used</a>
+      </li>
+      <li>
+        <a href="#reason">Why Did I Do This Project?</a>
+      </li>
+      <li><a href="#challenges">Challenges</a></li>
+      <li>
+        <a href="#process">Development Process</a>
+      </li>
+      <li>
+        <a href="#takeaways">My Top Takeaways</a>
+      </li>
+      <li><a href="#future-scope">Future Scope</a></li>
+      <li><a href="#credits">Credits</a></li>
+    </ul>
+  </nav> -->
+<article class="case-study">
+  <section id="overview">
+    <h1 class="section-header">Overview</h1>
+    <p class="section-content">
+      "Agency" is a corporate website landing page. It is fully responsive in
+      design. This webpage is developed as a personal project of mine to
+      refurbish my front-end web development skills.
+    </p>
+  </section>
+  <section id="technologies">
+    <h1 class="section-header">Technologies Implemented</h1>
+    <ul class="section-ul">
+      <li>Angular</li>
+      <li>Angular Material</li>
+      <li>HTML 5</li>
+      <li>CSS 3</li>
+      <li>Sass</li>
+      <li>TypeScript</li>
+      <li>Git</li>
+      <li>Zeplin</li>
+      <li>Photoshop</li>
+    </ul>
+  </section>
+  <section id="reason">
+    <h1 class="section-header">Why I Did This Project?</h1>
+    <p class="section-content">
+      After grasping the fundamentals of front-end web development, I decided to
+      sharpen my skills by working on some projects. Therefore, I came up with
+      the idea to develop this responsive webpage.
+    </p>
+  </section>
+  <section id="challenges">
+    <h1 class="section-header">Challenges</h1>
+    <dl class="section-dl">
+      <dt class="section-dl-term">
+        To make webpage responsive
+      </dt>
+      <dd class="section-dl-description">
         The design template I’ve chosen for this project was designed with big
-        screens (i.e. laptops, desktops) in mind.
-      </p>
-      <ul>
-        <li>
-          My first challenge was to make this design responsive so that the
-          users can have a smooth experience in all devices irrespective of the
-          screen sizes.
-        </li>
-        <li>
-          Another challenge I encountered, was with the images. There are in
-          total of 18 images in this website. Some of them were very large in
-          file size (2 MB+). It drastically affected the initial loading time of
-          the website (5-7s according to Lighthouse audit).
-        </li>
-      </ul>
-      <h1 id="development-process">Development Process</h1>
-      <h2 id="phase-1-planning">Phase 1: Planning</h2>
-      <p>
+        screens in mind. My challenge was to make this design responsive so that
+        the users can have a smooth experience in all devices irrespective of
+        the screen sizes.
+      </dd>
+      <dt class="section-dl-term">
+        To optimize initial loading time
+      </dt>
+      <dd class="section-dl-description">
+        Another challenge I encountered, was with the images. There are in total
+        of 18 images in this webpage. Some of them were very large in file size
+        (2 MB+). It drastically affected the
+        <a
+          href="https://developers.google.com/web/fundamentals/performance/get-started/"
+          target="_blank"
+          rel="noopener"
+          >initial loading time</a
+        >
+        of the webpage (5-7s according to Lighthouse audit).
+      </dd>
+    </dl>
+  </section>
+  <section id="process">
+    <h1 class="section-header">Development Process</h1>
+    <dl class="section-dl">
+      <dt class="section-dl-term">Phase 1: Planning</dt>
+      <dd class="section-dl-description">
         Before diving into coding, I like to think for a while to outline a
         strategy. I usually don’t spend too much time planning. I seek to be as
         AGILE as possible.<br />
         During this phase, I basically decided which technologies &amp; tools I
         would use in this project.
-      </p>
-      <h2 id="phase-2-coding">Phase 2: Coding</h2>
-      <p>
-        As I mentioned earlier, my <strong>first challenge</strong> was to make
-        this website responsive. I applied <strong>“CSS Flexbox”</strong> &amp;
-        <strong>“Media Queries”</strong> to accomplish that.<br />
-        You can visit the
+      </dd>
+      <dt class="section-dl-term">Phase 2: Coding</dt>
+      <dd class="section-dl-description">
+        As I mentioned earlier, my first challenge was to make this webpage
+        responsive. I applied “CSS Flexbox” &amp; “Media Queries” to accomplish
+        that. You can visit the
         <a
           href="https://github.com/snsakib/agency-landing-page"
           title="GitHub repo"
           >GitHub repo</a
         >
         for this project &amp; explore the codebase.
-      </p>
-      <h2 id="phase-3-refactoring">Phase 3: Refactoring</h2>
-      <p>
-        After developing the MVP (Minimum Viable Product) of my website, I
+      </dd>
+      <dt class="section-dl-term">Phase 3: Refactoring</dt>
+      <dd class="section-dl-description">
+        After developing the MVP (Minimum Viable Product) of my webpage, I
         turned my attention into small details.<br />
-        To resolve my <strong>second challenge</strong>, I optimized the images
-        &amp; was able to reduce the file sizes by 30% on average. I applied the
-        <strong>“srcset”</strong> attribute to dynamically render images
-        depending on the screen size (small images on small screens &amp; large
-        images on large screens). As a result,
-        <strong>the initial loading time reduced to 0.9-1s.</strong>
-      </p>
-      <h1 id="my-top-takeaways">My Top Takeaways</h1>
-      <h2 id="angular-ecosystem">Angular Ecosystem</h2>
-      <p>
+        To resolve my second challenge, I optimized the images &amp; was able to
+        reduce the file sizes by 30% on average. I applied the “srcset”
+        attribute to dynamically render images depending on the screen size
+        (small images on small screens &amp; large images on large screens). As
+        a result, the initial loading time reduced to 0.9-1s.
+      </dd>
+    </dl>
+  </section>
+  <section id="takeaways">
+    <h1 class="section-header">My Top Takeaways</h1>
+    <dl class="section-dl">
+      <dt class="section-dl-term">Angular Ecosystem</dt>
+      <dd class="section-dl-description">
         This project tested my knowledge on overall Angular ecosystem. It helped
         me to explore the whole process of “Creating To Deploying” an Angular
         app.
-      </p>
-      <h2 id="responsive-images">Responsive Images</h2>
-      <p>
+      </dd>
+      <dt class="section-dl-term">Responsive Images</dt>
+      <dd class="section-dl-description">
         After working on this project, I’m now capable of optimizing images for
         achieving a better performance.
-      </p>
-      <h2 id="persistency">Persistency</h2>
-      <p>
+      </dd>
+      <dt class="section-dl-term">Persistency</dt>
+      <dd class="section-dl-description">
         To be honest, there were times I couldn’t figure out what went wrong. At
         points, I felt devasted. But I never thought of quitting. This lesson of
         grit will be very useful not only for achieving my career goals but also
         in my personal development.
-      </p>
-      <h1 id="future-scope">Future Scope</h1>
-      <p>
-        Every project has some deficiencies, this project is no exception to
-        that.<br />
-        In the near future, I’ll work on
-      </p>
-      <ul>
-        <li>Accessibility</li>
-        <li>Implementing <a href="http://getbem.com/" title="BEM">BEM</a></li>
-        <li>Testing</li>
-      </ul>
-      <h1 id="credits">Credits</h1>
-      <p>
-        Since I’m not a user-interface (UI) designer, I googled for designs
-        &amp; eventually found
-        <a
-          href="https://www.behance.net/gallery/73804499/Agency-Website-Free-Template-PSD"
-          title="this PSD template"
-          >this PSD template</a
-        >.<br />
-        A huge thanks to
-        <a href="https://www.behance.net/ndavidsan" title="Nelson David Sánchez"
-          >Nelson David Sánchez</a
-        >
-        for allowing me to use this template for free.
-      </p>
-    </div>
-  </div>
-</section>
+      </dd>
+    </dl>
+  </section>
+  <section id="future-scope">
+    <h1 class="section-header">Future Scope</h1>
+    <p class="section-content">
+      Every project has some deficiencies, this project is no exception to that.
+      In the near future, I’ll work on
+    </p>
+    <ul class="section-ul">
+      <li class="section-ul-item">Accessibility</li>
+      <li class="section-ul-item">
+        Implementing <a href="http://getbem.com/" title="BEM">BEM</a>
+      </li>
+      <li class="section-ul-item">Testing</li>
+    </ul>
+  </section>
+  <section id="credits">
+    <h1 class="section-header">Credits</h1>
+    <p class="section-content">
+      I'm grateful to
+      <a href="https://www.behance.net/ndavidsan" title="Nelson David Sánchez"
+        >Nelson David Sánchez</a
+      >
+      for his
+      <a
+        href="https://www.behance.net/gallery/73804499/Agency-Website-Free-Template-PSD"
+        title="this PSD template"
+        >awesome PSD template</a
+      >.
+    </p>
+  </section>
+</article>

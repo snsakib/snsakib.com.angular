@@ -1,0 +1,134 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/helpers';
+@import 'mixins';
+@import 'host';
+@import 'responsive-x-padding';
+
+$width: 400px;
+
+:host {
+  @extend .host;
+  @extend .bg-image;
+  @extend .responsive-x-padding;
+  @extend .custom-scrollbar;
+  height: calc(100vh - #{$toolbar-height});
+  color: $text-color;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  @include breakpointMin(laptop) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+nav {
+  // border: 1px solid red;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 1rem;
+  }
+
+  ul {
+    padding-left: 2rem;
+
+    li {
+      // border: 1px solid red;
+      line-height: 1.3rem;
+      padding: 0.5rem 0;
+
+      a {
+        // border: 1px solid red;
+        color: $text-color;
+        font-size: 1.2rem;
+      }
+
+      ul {
+        // border: 1px solid red;
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+article {
+  @include breakpointMin(tablet) {
+    width: 75%;
+  }
+
+  @include breakpointMin(laptop) {
+    width: 80%;
+  }
+}
+
+.banner-image {
+  margin-bottom: 4rem;
+  width: 100%;
+  border-radius: 3px;
+}
+
+section {
+  margin-bottom: 4rem;
+
+  .section-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #404040;
+  }
+
+  .section-content {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .section-logos {
+    border: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+
+    svg {
+      border: 1px solid red;
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+
+  .section-dl {
+    font-size: 1.3rem;
+    line-height: 2rem;
+
+    &-term {
+      color: white;
+      font-style: oblique;
+    }
+
+    &-description {
+      margin: 0.5rem 0 2rem;
+      // padding-left: 1.5rem;
+    }
+  }
+
+  .section-ul {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    list-style-type: disc;
+    padding: 1rem 0 0 2rem;
+  }
+
+  a {
+    color: $text-color;
+  }
+}
