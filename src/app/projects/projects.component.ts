@@ -12,11 +12,11 @@ export class ProjectsComponent {
       title: 'Agency',
       category: 'Corporate website landing page',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ducimus quos quidem saepe numquam maxime hic. Minus molestiae autem voluptatum, repellat delectus facere voluptatibus modi alias non? Quo reiciendis!',
+        'A responsive webpage developed as a personal project of mine to refurbish my front-end development skills.',
       tags: ['HTML5', 'CSS3', 'Sass', 'Bootstrap', 'Angular'],
       liveDemo: 'https://www.snsakib.com/agency-landing-page',
       caseStudy: '/projects/agency/case-study',
-      imgPath: 'assets/images/projects/uni.jpg',
+      imgPath: 'assets/images/projects/agency/agency-screenshot-280.jpg',
       imgAlt: 'Screenshot of the project'
     }
   ];
