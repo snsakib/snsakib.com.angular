@@ -28,8 +28,8 @@
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; // add 'space-between' after filter is added
+  -ms-flex-pack: center;
+  justify-content: center; // add 'space-between' after filter is added
 
   @include breakpointMin(tablet) {
     -webkit-box-orient: horizontal;
