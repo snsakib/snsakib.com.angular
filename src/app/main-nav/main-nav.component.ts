@@ -23,10 +23,10 @@ export class MainNavComponent implements OnInit {
       routerLink: '/projects',
       linkText: 'Projects'
     },
-    {
-      routerLink: "/blog",
-      linkText: "Blog"
-    },
+    // {
+    //   routerLink: "/blog",
+    //   linkText: "Blog"
+    // },
     {
       routerLink: '/contact',
       linkText: 'Contact'

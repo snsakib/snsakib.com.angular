@@ -61,10 +61,18 @@ $width: 400px;
     max-width: $width;
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    // Remove this section if you add "Blog" link
+    grid-template-columns: repeat(2, auto);
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    // --------------------------------------------
+
+    // Uncomment this if you add "blog" link
+    // grid-template-columns: repeat(3, auto);
+    // -webkit-box-pack: justify;
+    // -ms-flex-pack: justify;
+    // justify-content: space-between;
 
     .page-link {
       @extend .highlight-link;
