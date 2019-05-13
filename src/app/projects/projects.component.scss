@@ -45,7 +45,7 @@
 mat-card {
   width: 17.5rem; // 280px
   margin: 1.5rem 0;
-  background-color: lighten($color: $secondary-color, $amount: 5);
+  background-color: $bg-color-light;
 
   @include breakpointMin(tablet) {
     margin: 2rem;
@@ -68,7 +68,7 @@ mat-card {
     }
 
     .project-description {
-      color: $text-color;
+      color: $normal-text-color;
       line-height: 1.25rem; // 20px
     }
   }
@@ -90,7 +90,7 @@ mat-card {
       font-size: 1rem;
       font-weight: 500;
       text-decoration: none;
-      color: $secondary-color;
+      color: $normal-text-color;
       border-radius: 3px;
       letter-spacing: 1px;
 
@@ -130,7 +130,7 @@ mat-card {
       font-weight: 400;
 
       &:hover {
-        color: $secondary-color;
+        color: $normal-text-color;
         font-weight: 500;
         border: 1px solid transparent;
       }
@@ -160,7 +160,7 @@ mat-card {
   font-weight: 400;
 
   &:hover {
-    color: $secondary-color;
+    color: $normal-text-color;
     font-weight: 500;
     border: 1px solid transparent;
     background-image: -webkit-gradient(

@@ -4,13 +4,16 @@
 //Helper classes for stylings
 
 .bg-image {
-  background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #0b0d0e), to(#22282b));
-  background-image: linear-gradient(to bottom right, #0b0d0e 50%, #22282b 100%);
+  // background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #0b0d0e), to(#22282b));
+  // background-image: linear-gradient(to bottom right, #0b0d0e 50%, #22282b 100%);
+  background-color: $bg-color;
 }
 
 .text-gradient {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
-  background-image: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
+  // background-image: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
+  // background-image: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#fc431e), color-stop(60%, #d81c4b));
+  background-image: linear-gradient(to right, #fc431e 0%, #d81c4b 60%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -18,18 +21,18 @@
 
 .highlight-text {
   font-weight: 500;
-  color: white;
+  color: $highlight-text-color;
 }
 
 .highlight-link {
   text-decoration: none;
-  color: $text-color;
+  color: $normal-text-color;
   font-weight: 500;
   padding: 0.2em 0.3em;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#f9d423), to(#f83600));
-  background-image: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#fc431e), to(#d81c4b));
+  background-image: linear-gradient(to right, #fc431e 0%, #d81c4b 100%);
   background-size: 100% 0.1em;
   background-repeat: no-repeat;
   background-position: left 0 bottom 5%;
@@ -37,8 +40,8 @@
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-size: 100% 100%;
-    color: $secondary-color;
+    background-size: 100% 40%;
+    color: $highlight-text-color;
   }
 }
 

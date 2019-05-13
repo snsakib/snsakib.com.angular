@@ -8,7 +8,7 @@
   height: 100vh;
 
   .nav-link {
-    color: $text-color;
+    color: $normal-text-color;
     font-size: 1.25rem;
 
     &.active,
@@ -21,10 +21,10 @@
 
   .sidenav {
     width: 15.625rem; // 250px
-    background-color: $secondary-color;
+    background-color: $bg-color;
 
     mat-toolbar {
-      background-color: $secondary-color;
+      background-color: $bg-color;
       padding-left: 3rem;
       svg {
         width: 2.1875rem;
@@ -42,7 +42,7 @@
   }
 
   mat-sidenav-content {
-    background-color: $secondary-color;
+    background-color: $bg-color;
 
     mat-toolbar {
       @extend .responsive-x-padding;
@@ -51,14 +51,14 @@
       top: 0;
       height: $toolbar-height;
       z-index: 1;
-      background-color: $secondary-color;
-      color: $secondary-color;
+      background-color: $bg-color;
+      color: $normal-text-color;
 
       #menuIcon {
-        background-color: $secondary-color;
+        background-color: $bg-color;
         margin-right: 1.25rem;
         padding: 0.625rem;
-        color: $text-color;
+        color: $normal-text-color;
         font-size: 1.875rem;
         border: none;
 
