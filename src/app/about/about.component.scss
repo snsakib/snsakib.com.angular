@@ -13,27 +13,23 @@ $width: 400px;
   @extend .custom-scrollbar;
   height: calc(100vh - #{$toolbar-height});
   color: $text-color;
+  padding-top: 2rem;
 }
 
 #home {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
   #intro {
-    margin: 2rem 0;
-    // Uncomment this if you add profile picture
-    // @media (min-width: 550px) {
-    //   display: grid;
-    //   grid-template-columns: 150px auto;
-    //   grid-column-gap: 2rem;
-    //   -webkit-box-align: center;
-    //   -ms-flex-align: center;
-    //   align-items: center;
-    // }
-
-    // #profile-picture {
-    //   margin: 2rem 0;
-    // }
-
     #general-info {
       #name {
         font-size: 1.9rem;
@@ -60,19 +56,15 @@ $width: 400px;
   #page-links {
     max-width: $width;
     margin: 2rem 0;
-    display: grid;
-    // Remove this section if you add "Blog" link
-    grid-template-columns: repeat(2, auto);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    // --------------------------------------------
-
-    // Uncomment this if you add "blog" link
-    // grid-template-columns: repeat(3, auto);
-    // -webkit-box-pack: justify;
-    // -ms-flex-pack: justify;
-    // justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 
     .page-link {
       @extend .highlight-link;
