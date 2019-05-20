@@ -26,8 +26,8 @@ $width: 400px;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   #intro {
     #general-info {
@@ -73,6 +73,7 @@ $width: 400px;
   }
 
   #call-to-action {
+    margin-top: 3rem;
     @include breakpointMin(laptop) {
       display: grid;
       grid-template-columns: 25rem auto;
