@@ -17,6 +17,10 @@ const routes: Routes = [
     path: 'blog',
     loadChildren: './blog/blog.module#BlogModule'
   },
+  {
+    path: 'certificates',
+    loadChildren: './certificates/certificates.module#CertificatesModule'
+  },
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
   { path: '', pathMatch: 'full', redirectTo: 'about' }
 ];
