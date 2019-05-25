@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./certificate.component.scss']
 })
 export class CertificateComponent implements OnInit {
+  courseName: string;
+  pdfSrc: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
+    this.courseName = 'angular-cli.pdf';
+    this.pdfSrc = `assets/certificates/pluralsight/${this.courseName}`;
   }
-
 }
