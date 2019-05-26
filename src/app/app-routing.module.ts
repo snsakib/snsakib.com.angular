@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: './blog/blog.module#BlogModule'
   },
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+  {
+    path: 'certificates/:course',
+    loadChildren: './certificates/certificates.module#CertificatesModule'
+  },
   { path: '', pathMatch: 'full', redirectTo: 'about' }
 ];
 

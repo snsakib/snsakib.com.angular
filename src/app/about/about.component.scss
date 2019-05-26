@@ -7,48 +7,37 @@
 $width: 400px;
 
 :host {
-  @extend .host;
   @extend .bg-image;
   @extend .responsive-x-padding;
   @extend .custom-scrollbar;
-  height: calc(100vh - #{$toolbar-height});
-  color: $normal-text-color;
+  min-height: calc(100vh - #{$toolbar-height});
+  color: $text-color;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-#home {
-  height: 100%;
+#intro {
+  margin-top: 2rem;
+  #name {
+    font-size: 1.9rem;
+    font-weight: 500;
 
-  #intro {
-    margin: 2rem 0;
-    // Uncomment this if you add profile picture
-    // @media (min-width: 550px) {
-    //   display: grid;
-    //   grid-template-columns: 150px auto;
-    //   grid-column-gap: 2rem;
-    //   -webkit-box-align: center;
-    //   -ms-flex-align: center;
-    //   align-items: center;
-    // }
-
-    // #profile-picture {
-    //   margin: 2rem 0;
-    // }
-
-    #general-info {
-      #name {
-        font-size: 1.9rem;
-        font-weight: 500;
-
-        @include breakpointMin(tablet) {
-          font-size: 2.2rem;
-        }
-      }
-
-      #profession {
-        font-size: 1.5rem;
-        margin: 1rem 0;
-      }
+    @include breakpointMin(tablet) {
+      font-size: 2.2rem;
     }
+  }
+
+  #profession {
+    font-size: 1.5rem;
+    margin: 1rem 0;
   }
 }
 
@@ -60,19 +49,15 @@ $width: 400px;
   #page-links {
     max-width: $width;
     margin: 2rem 0;
-    display: grid;
-    // Remove this section if you add "Blog" link
-    grid-template-columns: repeat(2, auto);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: space-evenly;
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
-    // --------------------------------------------
-
-    // Uncomment this if you add "blog" link
-    // grid-template-columns: repeat(3, auto);
-    // -webkit-box-pack: justify;
-    // -ms-flex-pack: justify;
-    // justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 
     .page-link {
       @extend .highlight-link;
@@ -81,6 +66,7 @@ $width: 400px;
   }
 
   #call-to-action {
+    margin-top: 3rem;
     @include breakpointMin(laptop) {
       display: grid;
       grid-template-columns: 25rem auto;
