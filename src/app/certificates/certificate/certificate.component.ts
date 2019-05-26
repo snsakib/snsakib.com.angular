@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./certificate.component.scss']
 })
 export class CertificateComponent implements OnInit {
-  courseName: string;
+  course: string;
   pdfSrc: string;
 
   constructor(private route: ActivatedRoute) {}
@@ -18,8 +18,8 @@ export class CertificateComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.courseName = params.get('course');
-      this.pdfSrc = `assets/certificates/${this.courseName}.pdf`;
+      this.course = params.get('course');
+      this.pdfSrc = `../../../assets/certificates/${this.course}.pdf`;
     });
   }
 }
