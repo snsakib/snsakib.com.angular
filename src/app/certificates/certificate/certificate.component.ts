@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'certificate',
@@ -9,10 +10,16 @@ export class CertificateComponent implements OnInit {
   courseName: string;
   pdfSrc: string;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
+
+  onError(e: CustomEvent) {
+    console.log('error', e);
+  }
 
   ngOnInit() {
-    this.courseName = 'angular-cli.pdf';
-    this.pdfSrc = `assets/certificates/pluralsight/${this.courseName}`;
+    this.route.paramMap.subscribe(params => {
+      this.courseName = params.get('course');
+      this.pdfSrc = `assets/certificates/${this.courseName}.pdf`;
+    });
   }
 }
