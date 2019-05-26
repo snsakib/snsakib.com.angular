@@ -12,7 +12,7 @@ $width: 400px;
   @extend .responsive-x-padding;
   @extend .custom-scrollbar;
   height: calc(100vh - #{$toolbar-height});
-  color: $text-color;
+  color: $normal-text-color;
   padding-top: 2rem;
   padding-bottom: 2rem;
 
@@ -41,7 +41,7 @@ nav {
 
       a {
         // border: 1px solid red;
-        color: $text-color;
+        color: $normal-text-color;
         font-size: 1.2rem;
       }
 
@@ -129,6 +129,6 @@ section {
   }
 
   a {
-    color: $text-color;
+    color: $normal-text-color;
   }
 }

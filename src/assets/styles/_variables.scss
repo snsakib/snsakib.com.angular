@@ -1,12 +1,24 @@
-//Colors
-$primary-color: #2671f2;
-$secondary-color: #0b0d0e;
-$logo-gradient: linear-gradient(to bottom right, #f9d423 0%, #f83600 100%);
-$secondary-color-light: lighten(
-  $color: $secondary-color,
-  $amount: 5
-); //#161a1c
-$text-color: #bfbfbf;
+// Colors
+$gradient-color-left: #fc431e;
+$gradient-color-right: #d81c4b;
+$link-underline-color: linear-gradient(
+  to right,
+  $gradient-color-left 0%,
+  $gradient-color-right 100%
+);
+$normal-text-color: #bfbfbf;
+$highlight-text-color: white;
+$gradient-text-color: linear-gradient(
+  to right,
+  $gradient-color-left 0%,
+  $gradient-color-right 60%
+);
+$bg-color: #080016;
+$bg-color-light: lighten(
+  $color: $bg-color,
+  $amount: 10
+);
 
-//Dimensions
+// Dimensions
+$toolbar-height: 4.375rem;
 $toolbar-height: 4.375rem;

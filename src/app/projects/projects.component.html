@@ -14,14 +14,22 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <a href="{{ project.liveDemo }}" class="demo-btn">LIVE DEMO</a>
-        <a routerLink="{{ project.caseStudy }}" class="case-study-btn"
+        <a href="{{ project.liveDemo }}" id="demo-btn" class="primary-btn"
+          >LIVE DEMO</a
+        >
+        <a
+          routerLink="{{ project.caseStudy }}"
+          id="case-study-btn"
+          class="secondary-btn"
           >CASE STUDY</a
         >
       </mat-card-actions>
     </mat-card>
   </section>
-  <a href="https://github.com/snsakib?tab=repositories" class="github-btn"
+  <a
+    href="https://github.com/snsakib?tab=repositories"
+    id="github-btn"
+    class="secondary-btn"
     >View more on GitHub</a
   >
 </section>

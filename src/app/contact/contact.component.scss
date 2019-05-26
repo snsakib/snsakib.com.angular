@@ -59,16 +59,12 @@
       padding: 0.4em 0.3em;
       background-size: 100% 1px;
       background-position: left 0 bottom 0;
-
-      &:hover {
-        color: $text-color;
-      }
     }
 
     &:hover {
       span {
-        background-size: 100% 100%;
-        color: $secondary-color;
+        background-size: 100% 40%;
+        color: $highlight-text-color;
       }
     }
 
@@ -80,14 +76,13 @@
       width: 2.5rem;
       height: 2.5rem;
       margin-right: 0.625rem;
-      fill: $primary-color;
       pointer-events: none;
     }
   }
 }
 
 #note {
-  color: $text-color;
+  color: $normal-text-color;
   font-size: 1rem;
   width: 17.5rem;
 

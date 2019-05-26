@@ -76,50 +76,9 @@ $width: 400px;
     }
 
     #hire-me {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
       max-width: $width;
-      height: 2.5rem;
-      font-size: 1.3rem;
-      font-weight: 500;
-      text-decoration: none;
-      color: $secondary-color;
-      border-radius: 3px;
-      margin-bottom: 2rem;
-      background-image: -webkit-gradient(
-        linear,
-        left top, right bottom,
-        from(#f9d423),
-        to(#f83600)
-      );
-      background-image: linear-gradient(
-        to bottom right,
-        #f9d423 0%,
-        #f83600 100%
-      );
       @include breakpointMin(laptop) {
         margin-bottom: 0;
-      }
-
-      &:hover {
-        background-image: -webkit-gradient(
-          linear,
-          left top, right bottom,
-          from(#f83600),
-          to(#f9d423)
-        );
-        background-image: linear-gradient(
-          to bottom right,
-          #f83600 0%,
-          #f9d423 100%
-        );
       }
     }
 
