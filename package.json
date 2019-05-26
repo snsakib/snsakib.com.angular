@@ -27,6 +27,7 @@
     "@angular/router": "~7.2.12",
     "core-js": "^2.5.4",
     "hammerjs": "^2.0.8",
+    "ng2-pdf-viewer": "^5.2.4",
     "reset-css": "^4.0.1",
     "rxjs": "~6.4.0",
     "skb-scss": "^3.0.3",
@@ -45,6 +46,6 @@
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.4",
-    "webpack-bundle-analyzer": "^3.0.4"
+    "webpack-bundle-analyzer": "^3.3.2"
   }
 }
