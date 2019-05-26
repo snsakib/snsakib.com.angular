@@ -75,6 +75,28 @@
   );
 }
 
+.secondary-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  border: 1px solid $gradient-color-right;
+  color: $gradient-color-right;
+  font-weight: 400;
+
+  &:hover {
+    @extend .primary-btn;
+  }
+}
+
 .custom-scrollbar {
   @extend .scrollbar;
 
