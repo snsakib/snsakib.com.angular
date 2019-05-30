@@ -11,7 +11,7 @@ $width: 400px;
   @extend .responsive-x-padding;
   @extend .custom-scrollbar;
   min-height: calc(100vh - #{$toolbar-height});
-  color: $text-color;
+  color: $normal-text-color;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

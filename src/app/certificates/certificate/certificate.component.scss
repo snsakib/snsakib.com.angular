@@ -10,5 +10,5 @@
   @extend .custom-scrollbar;
   display: block;
   min-height: calc(100vh - #{$toolbar-height});
-  color: $text-color;
+  color: $normal-text-color;
 }
