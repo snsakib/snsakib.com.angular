@@ -6,21 +6,21 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'projects',
-    loadChildren: './projects/projects.module#ProjectsModule'
+    loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
   {
     path: 'projects/agency/case-study',
     loadChildren:
-      './case-studies/agency-case-study/agency-case-study.module#AgencyCaseStudyModule'
+      () => import('./case-studies/agency-case-study/agency-case-study.module').then(m => m.AgencyCaseStudyModule)
   },
   {
     path: 'blog',
-    loadChildren: './blog/blog.module#BlogModule'
+    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   },
-  { path: 'contact', loadChildren: './contact/contact.module#ContactModule' },
+  { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
   {
     path: 'certificates/:course',
-    loadChildren: './certificates/certificates.module#CertificatesModule'
+    loadChildren: () => import('./certificates/certificates.module').then(m => m.CertificatesModule)
   },
   { path: '', pathMatch: 'full', redirectTo: 'about' }
 ];
