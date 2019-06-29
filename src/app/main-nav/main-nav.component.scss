@@ -1,8 +1,6 @@
+@import '../../../node_modules/warp.css/scss/base/typography';
+@import '../../../node_modules/warp.css/scss/layout/x-padding';
 @import '../../assets/styles/variables';
-@import '../../assets/styles/helpers';
-@import 'host';
-@import 'mixins';
-@import 'responsive-x-padding';
 
 .sidenav-container {
   height: 100vh;
@@ -10,21 +8,22 @@
   .nav-link {
     color: $normal-text-color;
     font-size: 1.25rem;
+    transition: all .5s ease-in-out;
 
     &.active,
     &:hover {
       span {
-        @extend .text-gradient;
+        color: $primary-color;
       }
     }
   }
 
   .sidenav {
     width: 15.625rem; // 250px
-    background-color: $bg-color;
+    background-color: $background-color;
 
     mat-toolbar {
-      background-color: $bg-color;
+      background-color: $background-color;
       padding-left: 3rem;
       svg {
         width: 2.1875rem;
@@ -42,20 +41,20 @@
   }
 
   mat-sidenav-content {
-    background-color: $bg-color;
+    background-color: $background-color;
 
     mat-toolbar {
-      @extend .responsive-x-padding;
+      @extend .x-padding;
       position: -webkit-sticky;
       position: sticky;
       top: 0;
       height: $toolbar-height;
       z-index: 1;
-      background-color: $bg-color;
+      background-color: $background-color;
       color: $normal-text-color;
 
       #menuIcon {
-        background-color: $bg-color;
+        background-color: $background-color;
         margin-right: 1.25rem;
         padding: 0.625rem;
         color: $normal-text-color;

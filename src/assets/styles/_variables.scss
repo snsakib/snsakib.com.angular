@@ -1,24 +1,3 @@
-// Colors
-$gradient-color-left: #fc431e;
-$gradient-color-right: #d81c4b;
-$link-underline-color: linear-gradient(
-  to right,
-  $gradient-color-left 0%,
-  $gradient-color-right 100%
-);
-$normal-text-color: #bfbfbf;
-$highlight-text-color: white;
-$gradient-text-color: linear-gradient(
-  to right,
-  $gradient-color-left 0%,
-  $gradient-color-right 60%
-);
-$bg-color: #080016;
-$bg-color-light: lighten(
-  $color: $bg-color,
-  $amount: 10
-);
-
 // Dimensions
 $toolbar-height: 4.375rem;
 $toolbar-height: 4.375rem;

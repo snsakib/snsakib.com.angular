@@ -1,16 +1,18 @@
+@import '../../../../node_modules/warp.css/scss/pages/bg';
+@import '../../../../node_modules/warp.css/scss/layout/x-padding';
+@import '../../../../node_modules/warp.css/scss/components/scrollbar';
+@import '../../../../node_modules/warp.css/scss/utils/mixins';
 @import '../../../assets/styles/variables';
-@import '../../../assets/styles/helpers';
-@import 'mixins';
-@import 'host';
-@import 'responsive-x-padding';
+
 
 $width: 400px;
 
 :host {
-  @extend .host;
-  @extend .bg-image;
-  @extend .responsive-x-padding;
-  @extend .custom-scrollbar;
+  @extend .bg;
+  @extend .x-padding;
+  @extend .scrollbar;
+  display: block;
+  position: relative;
   height: calc(100vh - #{$toolbar-height});
   color: $normal-text-color;
   padding-top: 2rem;
@@ -77,7 +79,8 @@ section {
     font-weight: 500;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #404040;
+    color: $primary-color;
+    border-bottom: 2px solid $primary-color;
   }
 
   .section-content {
@@ -86,7 +89,6 @@ section {
   }
 
   .section-logos {
-    border: 1px solid red;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -100,7 +102,6 @@ section {
     flex-wrap: nowrap;
 
     svg {
-      border: 1px solid red;
       height: 4rem;
       width: 4rem;
     }
@@ -117,7 +118,6 @@ section {
 
     &-description {
       margin: 0.5rem 0 2rem;
-      // padding-left: 1.5rem;
     }
   }
 

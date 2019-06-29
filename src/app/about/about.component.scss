@@ -1,16 +1,17 @@
+@import '../../../node_modules/warp.css/scss/pages/bg';
+@import '../../../node_modules/warp.css/scss/layout/x-padding';
+@import '../../../node_modules/warp.css/scss/components/scrollbar';
+@import '../../../node_modules/warp.css/scss/base/typography';
+@import '../../../node_modules/warp.css/scss/utils/mixins';
 @import '../../assets/styles/variables';
-@import '../../assets/styles/helpers';
-@import 'mixins';
-@import 'host';
-@import 'responsive-x-padding';
 
 $width: 400px;
 
 :host {
-  @extend .bg-image;
-  @extend .responsive-x-padding;
-  @extend .custom-scrollbar;
-  min-height: calc(100vh - #{$toolbar-height});
+  @extend .bg;
+  @extend .x-padding;
+  @extend .scrollbar;
+  height: calc(100vh - #{$toolbar-height});
   color: $normal-text-color;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -26,6 +27,7 @@ $width: 400px;
 
 #intro {
   margin-top: 2rem;
+
   #name {
     font-size: 1.9rem;
     font-weight: 500;
@@ -60,7 +62,7 @@ $width: 400px;
     align-items: center;
 
     .page-link {
-      @extend .highlight-link;
+      @extend .primary-link;
       padding: 0.2em 0.5em;
     }
   }

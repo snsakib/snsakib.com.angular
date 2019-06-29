@@ -42,13 +42,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
-            "stylePreprocessorOptions": {
-              "includePaths": ["./node_modules/skb-scss/"]
-            },
             "styles": [
               "./node_modules/reset-css/sass/_reset.scss",
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "./node_modules/skb-scss/skb.scss",
+              "./node_modules/warp.css/scss/main.scss",
               "src/styles.scss"
             ],
             "scripts": []

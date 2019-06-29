@@ -1,13 +1,15 @@
+@import '../../../node_modules/warp.css/scss/pages/bg';
+@import '../../../node_modules/warp.css/scss/layout/x-padding';
+@import '../../../node_modules/warp.css/scss/components/scrollbar';
+@import '../../../node_modules/warp.css/scss/utils/mixins';
 @import '../../assets/styles/variables';
-@import '../../assets/styles/helpers';
-@import 'host';
-@import 'mixins';
-@import 'responsive-x-padding';
 
 :host {
-  @extend .host;
-  @extend .bg-image;
-  @extend .responsive-x-padding;
+  @extend .bg;
+  @extend .x-padding;
+  @extend .scrollbar;
+  display: block;
+  position: relative;
   min-height: calc(100vh - #{$toolbar-height});
 }
 
@@ -45,7 +47,7 @@
 mat-card {
   width: 17.5rem; // 280px
   margin: 1.5rem 0;
-  background-color: $bg-color-light;
+  background-color: lighten($color: $background-color, $amount: 5);
 
   @include breakpointMin(tablet) {
     margin: 2rem;

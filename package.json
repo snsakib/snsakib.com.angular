@@ -29,7 +29,7 @@
     "ng2-pdf-viewer": "^5.2.4",
     "reset-css": "^4.0.1",
     "rxjs": "~6.5.2",
-    "skb-scss": "^3.0.3",
+    "warp.css": "^3.1.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

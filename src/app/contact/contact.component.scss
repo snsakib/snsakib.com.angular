@@ -1,13 +1,16 @@
+@import '../../../node_modules/warp.css/scss/pages/bg';
+@import '../../../node_modules/warp.css/scss/layout/x-padding';
+@import '../../../node_modules/warp.css/scss/components/scrollbar';
+@import '../../../node_modules/warp.css/scss/base/typography';
+@import '../../../node_modules/warp.css/scss/utils/mixins';
 @import '../../assets/styles/variables';
-@import '../../assets/styles/helpers';
-@import 'mixins';
-@import 'host';
-@import 'responsive-x-padding';
 
 :host {
-  @extend .host;
-  @extend .bg-image;
-  @extend .responsive-x-padding;
+  @extend .bg;
+  @extend .x-padding;
+  @extend .scrollbar;
+  display: block;
+  position: relative;
   height: calc(100vh - #{$toolbar-height});
   padding-top: 3.125rem;
   padding-bottom: 3.125rem;
@@ -54,7 +57,7 @@
     align-items: center;
 
     span {
-      @extend .highlight-link;
+      @extend .primary-link;
       height: 100%;
       padding: 0.4em 0.3em;
       background-size: 100% 1px;
@@ -64,7 +67,7 @@
     &:hover {
       span {
         background-size: 100% 40%;
-        color: $highlight-text-color;
+        color: white;
       }
     }
 

@@ -1,14 +1,13 @@
+@import '../../../../node_modules/warp.css/scss/pages/bg';
+@import '../../../../node_modules/warp.css/scss/layout/x-padding';
+@import '../../../../node_modules/warp.css/scss/components/scrollbar';
 @import '../../../assets/styles/variables';
-@import '../../../assets/styles/helpers';
-@import 'mixins';
-@import 'host';
-@import 'responsive-x-padding';
 
 :host {
-  @extend .bg-image;
-  @extend .responsive-x-padding;
-  @extend .custom-scrollbar;
+  @extend .bg;
+  @extend .x-padding;
+  @extend .scrollbar;
   display: block;
-  min-height: calc(100vh - #{$toolbar-height});
+  height: calc(100vh - #{$toolbar-height});
   color: $normal-text-color;
 }
