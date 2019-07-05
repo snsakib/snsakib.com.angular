@@ -6,9 +6,11 @@ import { RouterModule } from '@angular/router';
 
 // Components
 import { BlogComponent } from './blog.component';
+import { BlogPostsComponent } from './blog-posts/blog-posts.component';
+import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @NgModule({
-  declarations: [BlogComponent],
+  declarations: [BlogComponent, BlogPostsComponent, BlogPostComponent],
   imports: [
     CommonModule,
     RouterModule.forChild([
