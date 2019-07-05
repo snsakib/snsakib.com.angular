@@ -1,8 +1,7 @@
 <section id="blog">
   <section id="heading">
     <p>
-      Though I don't have all the answers, I feel delighted to teach others what
-      I've learned so far.
+      What are you going to learn today?
     </p>
 
     <!-- <section id="filter">
@@ -17,14 +16,13 @@
     </section> -->
   </section>
 
-  <section id="posts">
+  <section id="topics">
     <ul>
-      <li class="post" *ngFor="let post of posts">
-        <a class="post-link" routerLink="/">
-          <h1 class="gradient-text">{{ post.title }}</h1>
+      <li class="topic" *ngFor="let topic of topics">
+        <a class="topic-link" routerLink="/">
+          <h1 class="gradient-text">{{ topic.name }}</h1>
           <p>
-            <span>{{ post.date }}</span>
-            <span>{{ post.timeToRead }} min read</span>
+            {{ topic.totalPosts }}
           </p>
         </a>
       </li>

@@ -61,14 +61,14 @@
   }
 }
 
-#posts {
-  .post {
+#topicss {
+  .topic {
     margin: 2rem 0;
     background-color: lighten($color: $background-color, $amount: 5);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 
-    .post-link {
+    .topic-link {
       display: block;
       padding: 1rem;
       text-decoration: none;
