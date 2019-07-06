@@ -69,6 +69,7 @@ $width: 400px;
 
   #call-to-action {
     margin-top: 3rem;
+
     @include breakpointMin(laptop) {
       display: grid;
       grid-template-columns: 25rem auto;
@@ -79,6 +80,7 @@ $width: 400px;
 
     #hire-me {
       max-width: $width;
+      margin-bottom: 2rem;
       @include breakpointMin(laptop) {
         margin-bottom: 0;
       }
