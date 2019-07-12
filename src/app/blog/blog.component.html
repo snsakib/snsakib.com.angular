@@ -17,16 +17,12 @@
   </section>
 
   <section id="topics">
-    <ul>
-      <li class="topic" *ngFor="let topic of topics | keyvalue">
-        <a class="topic-link" routerLink="/">
-          <h1 class="gradient-text">{{ topic.key }}</h1>
-          <p>
-            {{ topic.value }} Posts
-          </p>
-        </a>
-      </li>
-    </ul>
+    <div class="topic" *ngFor="let topic of topics | keyvalue">
+      <a class="topic-link" routerLink="/">
+        <h1 class="gradient-text">{{ topic.key }}</h1>
+        <p>{{ topic.value }} Posts</p>
+      </a>
+    </div>
 
     <!-- <section id="pagination">
       Pagination
