@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Module for router configuration
 import { RouterModule } from '@angular/router';
@@ -13,6 +14,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
   declarations: [BlogComponent, BlogPostsComponent, BlogPostComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterModule.forChild([
       {
         path: '',
