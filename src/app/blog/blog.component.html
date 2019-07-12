@@ -18,11 +18,11 @@
 
   <section id="topics">
     <ul>
-      <li class="topic" *ngFor="let topic of topics">
+      <li class="topic" *ngFor="let topic of topics | keyvalue">
         <a class="topic-link" routerLink="/">
-          <h1 class="gradient-text">{{ topic.name }}</h1>
+          <h1 class="gradient-text">{{ topic.key }}</h1>
           <p>
-            {{ topic.totalPosts }}
+            {{ topic.value }} Posts
           </p>
         </a>
       </li>
