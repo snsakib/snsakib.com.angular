@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'blog',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
 export class BlogComponent {
   topics: String[] = [];
 
-  constructor() {}
+  constructor(private http: HttpClient) {}
 }
