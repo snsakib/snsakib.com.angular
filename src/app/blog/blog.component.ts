@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+import { Post } from "../models/post.model";
 
 @Component({
   selector: "blog",
@@ -7,7 +8,7 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./blog.component.scss"]
 })
 export class BlogComponent implements OnInit {
-  topics: Object = {};
+  topics: Post;
 
   getPostsCategories() {
     return this.http.get(
@@ -18,7 +19,7 @@ export class BlogComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.getPostsCategories().subscribe(res => {
+    this.getPostsCategories().subscribe((res: Post) => {
       this.topics = res;
     });
   }
