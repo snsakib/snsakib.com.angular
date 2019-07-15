@@ -7,11 +7,9 @@ import { RouterModule } from '@angular/router';
 
 // Components
 import { BlogComponent } from './blog.component';
-import { BlogPostsComponent } from './blog-posts/blog-posts.component';
-import { BlogPostComponent } from './blog-post/blog-post.component';
 
 @NgModule({
-  declarations: [BlogComponent, BlogPostsComponent, BlogPostComponent],
+  declarations: [BlogComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -19,7 +17,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
       {
         path: '',
         component: BlogComponent,
-        data: { animation: 'blogPage' }
+        data: {animation: 'blogComponent'}
       }
     ])
   ]
