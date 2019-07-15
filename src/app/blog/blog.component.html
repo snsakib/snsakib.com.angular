@@ -7,7 +7,7 @@
 
   <section id="topics">
     <div class="topic" *ngFor="let topic of topics | keyvalue">
-      <a class="topic-link" routerLink="/blog/posts">
+      <a class="topic-link" routerLink="/blog/posts/{{ topic.key }}">
         <p class="topic-name gradient-text">{{ topic.key }}</p>
         <p class="total-posts">{{ topic.value }} Posts</p>
       </a>
