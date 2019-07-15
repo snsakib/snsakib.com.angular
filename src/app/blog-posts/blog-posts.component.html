@@ -1,3 +1,19 @@
-<p>
-  blog-posts works!
-</p>
+<section id="blog-posts">
+  <div id="heading">
+    <p>
+      What are you going to learn today?
+    </p>
+  </div>
+
+  <section id="posts">
+    <div class="post" *ngFor="let post of posts">
+      <a class="post-link" routerLink="/">
+        <p class="post-title gradient-text">{{ post.title }}</p>
+        <div class="post-info">
+          <p class="update-date">Updated: {{ post.updateDate | date: "mediumDate" }}</p>
+          <p class="time-to-read">{{ post.timeToRead }} min read</p>
+        </div>
+      </a>
+    </div>
+  </section>
+</section>
