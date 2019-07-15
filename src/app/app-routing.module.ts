@@ -18,7 +18,7 @@ const routes: Routes = [
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
   },
   {
-    path: 'blog/posts',
+    path: 'blog/posts/:category',
     loadChildren: () => import('./blog-posts/blog-posts.module').then(m => m.BlogPostsModule)
   },
   { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
