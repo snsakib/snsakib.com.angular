@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Post } from '../models/post.model';
@@ -6,7 +6,8 @@ import { Post } from '../models/post.model';
 @Component({
   selector: 'blog-post',
   templateUrl: './blog-post.component.html',
-  styleUrls: ['./blog-post.component.scss']
+  styleUrls: ['./blog-post.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class BlogPostComponent implements OnInit {
   post: Post;

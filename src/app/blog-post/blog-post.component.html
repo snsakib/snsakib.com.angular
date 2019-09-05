@@ -1,7 +1,13 @@
-<h1>
-  {{ post.title }}
-</h1>
-<p>Updated: {{ post.updateDate | date: "mediumDate" }}</p>
-<p>{{ post.timeToRead }} min read</p>
-<p>Author: {{ post.author }}</p>
-<article id="blog-post" [innerHTML]="post.content"></article>
+<article id="blog-post">
+  <header class="post-header">
+    <h1 class="post-title gradient-text">
+      {{ post.title }}
+    </h1>
+    <div class="post-info">
+      <p>Updated: {{ post.updateDate | date: "mediumDate" }}</p>
+      <p>{{ post.timeToRead }} min read</p>
+    </div>
+    <p>Author: {{ post.author }}</p>
+  </header>
+  <section id="post-content" [innerHTML]="post.content"></section>
+</article>
