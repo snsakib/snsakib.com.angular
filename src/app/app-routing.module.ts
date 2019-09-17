@@ -8,11 +8,11 @@ const routes: Routes = [
     path: 'projects',
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
-  // {
-  //   path: 'projects/agency/case-study',
-  //   loadChildren:
-  //     () => import('./case-studies/agency-case-study/agency-case-study.module').then(m => m.AgencyCaseStudyModule)
-  // },
+  {
+    path: 'projects/agency/case-study',
+    loadChildren:
+      () => import('./case-studies/agency-case-study/agency-case-study.module').then(m => m.AgencyCaseStudyModule)
+  },
   {
     path: 'blog',
     loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
