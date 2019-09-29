@@ -1,9 +1,9 @@
-@import '../../../node_modules/warp.css/scss/pages/bg';
-@import '../../../node_modules/warp.css/scss/layout/x-padding';
-@import '../../../node_modules/warp.css/scss/components/scrollbar';
-@import '../../../node_modules/warp.css/scss/base/typography';
-@import '../../../node_modules/warp.css/scss/utils/mixins';
-@import '../../assets/styles/variables';
+@import "../../../node_modules/warp.css/scss/pages/bg";
+@import "../../../node_modules/warp.css/scss/layout/x-padding";
+@import "../../../node_modules/warp.css/scss/components/scrollbar";
+@import "../../../node_modules/warp.css/scss/base/typography";
+@import "../../../node_modules/warp.css/scss/utils/mixins";
+@import "../../assets/styles/variables";
 
 $width: 400px;
 
@@ -88,16 +88,12 @@ $width: 400px;
 
     #contact-links {
       max-width: $width;
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      grid-column-gap: 3rem;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-
-      @include breakpointMin(laptop) {
-        grid-column-gap: 1.3rem;
-      }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
 
       .contact-link {
         height: 3rem;
@@ -110,6 +106,7 @@ $width: 400px;
         @include breakpointMin(laptop) {
           height: 2.5rem;
           width: 2.5rem;
+          margin: 0 5px;
           -webkit-transition: all 0.2s linear;
           transition: all 0.2s linear;
 
