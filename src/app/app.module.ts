@@ -5,7 +5,6 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 // Feature Modules
 import { AngularMaterialModule } from './angular-material.module';
-import { AboutModule } from './about/about.module';
 import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -20,9 +19,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     BrowserAnimationsModule,
     LayoutModule,
     AngularMaterialModule,
-    AboutModule,
+    HomeModule,
     AppRoutingModule,
-    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
