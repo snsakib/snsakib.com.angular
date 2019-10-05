@@ -6,12 +6,12 @@ import { LayoutModule } from '@angular/cdk/layout';
 // Feature Modules
 import { AngularMaterialModule } from './angular-material.module';
 import { AboutModule } from './about/about.module';
+import { HomeModule } from './home/home.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // Components
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [AppComponent, MainNavComponent],
