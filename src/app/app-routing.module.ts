@@ -21,7 +21,7 @@ const routes: Routes = [
     path: 'certificates/:course',
     loadChildren: () => import('./certificates/certificates.module').then(m => m.CertificatesModule)
   },
-  { path: '', pathMatch: 'full', redirectTo: 'about' }
+  { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
