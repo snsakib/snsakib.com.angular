@@ -5,8 +5,6 @@
 @import "../../../node_modules/warp.css/scss/utils/mixins";
 @import "../../assets/styles/variables";
 
-$width: 400px;
-
 :host {
   @extend .bg;
   @extend .x-padding;
@@ -25,101 +23,77 @@ $width: 400px;
   justify-content: center;
 }
 
-#intro {
-  margin-top: 2rem;
+#name {
+  margin: 2rem auto;
 
-  #name {
-    font-size: 1.9rem;
-    font-weight: 500;
-
-    @include breakpointMin(tablet) {
-      font-size: 2.2rem;
-    }
+  @include breakpointMin(tablet) {
+    width: 70%;
   }
 
-  #profession {
-    font-size: 1.5rem;
-    margin: 1rem 0;
+  @include breakpointMin(4k) {
+    width: 50%;
   }
 }
 
-#about {
-  line-height: 2em;
-  font-size: 1.3rem;
-  margin: 2rem 0 5rem 0;
+#profession {
+  font-size: 1.5rem;
+  text-align: center;
 
-  #page-links {
-    max-width: $width;
-    margin: 2rem 0;
+  @include breakpointMin(tablet) {
+    font-size: 1.8rem;
+  }
+}
+
+#call-to-action {
+  width: 100%;
+  margin: 3rem auto 0;
+
+  @include breakpointMin(mobile-l) {
+    width: 80%;
+  }
+
+  @include breakpointMin(tablet) {
+    width: 50%;
+  }
+
+  @include breakpointMin(laptop) {
+    width: 40%;
+  }
+
+  #hire-me {
+    margin-bottom: 2rem;
+  }
+
+  #contact-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
 
-    .page-link {
-      @extend .primary-link;
-      padding: 0.2em 0.5em;
-    }
-  }
+    .contact-link {
+      height: 3rem;
+      width: 3rem;
 
-  #call-to-action {
-    margin-top: 3rem;
-
-    @include breakpointMin(laptop) {
-      display: grid;
-      grid-template-columns: 25rem auto;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-    }
-
-    #hire-me {
-      max-width: $width;
-      margin-bottom: 2rem;
-      @include breakpointMin(laptop) {
-        margin-bottom: 0;
+      &:focus {
+        outline: none;
       }
-    }
 
-    #contact-links {
-      max-width: $width;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+      @include breakpointMin(laptop) {
+        margin: 0 5px;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
 
-      .contact-link {
-        height: 3rem;
-        width: 3rem;
-
-        &:focus {
-          outline: none;
+        &:hover {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
         }
+      }
 
-        @include breakpointMin(laptop) {
-          height: 2.5rem;
-          width: 2.5rem;
-          margin: 0 5px;
-          -webkit-transition: all 0.2s linear;
-          transition: all 0.2s linear;
-
-          &:hover {
-            -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-          }
-        }
-
-        svg {
-          pointer-events: none;
-          margin: 5px;
-        }
+      svg {
+        pointer-events: none;
+        margin: 5px;
       }
     }
   }
