@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [AppComponent, MainNavComponent],
@@ -20,7 +21,8 @@ import { MainNavComponent } from './main-nav/main-nav.component';
     LayoutModule,
     AngularMaterialModule,
     AboutModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
