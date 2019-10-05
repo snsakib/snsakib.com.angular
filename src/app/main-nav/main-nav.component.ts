@@ -13,11 +13,12 @@ import { zoomInSlideOutAnimation } from './route-animations';
   animations: [zoomInSlideOutAnimation]
 })
 export class MainNavComponent implements OnInit {
-  //Sets the menu links
+  constructor() {}
+  // Sets the menu links
   pages = [
     {
       routerLink: '/about',
-      linkText: 'About'
+      linkText: 'My Story'
     },
     {
       routerLink: '/projects',
@@ -33,7 +34,11 @@ export class MainNavComponent implements OnInit {
     }
   ];
 
-  //Method related to route transition animations. Returns a string value representing the state of the animation based on the custom data of the current active route
+  // If the width of screen is equals or greather than 1024px, the value of the property becomes true.
+  isLaptop: boolean;
+
+  // Method related to route transition animations.
+  // Returns a string value representing the state of the animation based on the custom data of the current active route
   prepareRoute(outlet: RouterOutlet) {
     return (
       outlet &&
@@ -42,10 +47,7 @@ export class MainNavComponent implements OnInit {
     );
   }
 
-  //If the width of screen is equals or greather than 1024px, the value of the property becomes true.
-  isLaptop: boolean;
-
-  //Checks the window width & sets the 'isLaptop' property value
+  // Checks the window width & sets the 'isLaptop' property value
   @HostListener('window:resize')
   onResize() {
     if (window.innerWidth < 1024) {
@@ -54,7 +56,6 @@ export class MainNavComponent implements OnInit {
       this.isLaptop = true;
     }
   }
-  constructor() {}
 
   ngOnInit() {
     this.onResize();
