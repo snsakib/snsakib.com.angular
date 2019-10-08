@@ -13,7 +13,7 @@ import { AboutComponent } from './about.component';
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'about',
+        path: '',
         component: AboutComponent,
         data: { animation: 'aboutPage' }
       }

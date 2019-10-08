@@ -5,6 +5,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then(m => m.AboutModule)
+  },
+  {
     path: 'projects',
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
@@ -17,7 +21,7 @@ const routes: Routes = [
     path: 'certificates/:course',
     loadChildren: () => import('./certificates/certificates.module').then(m => m.CertificatesModule)
   },
-  { path: '', pathMatch: 'full', redirectTo: 'about' }
+  { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
 @NgModule({
