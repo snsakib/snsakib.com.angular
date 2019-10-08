@@ -13,7 +13,7 @@
     &.active,
     &:hover {
       span {
-        @extend .gradient-text;
+        color: $primary-color;
       }
     }
   }
