@@ -77,12 +77,8 @@
 #call-to-action {
   margin-top: 4rem;
 
-  @include breakpointMin(mobile-l) {
-    max-width: 450px;
-  }
-
   #cta-btn {
-    margin-bottom: 2rem;
+    height: 50px;
 
     &:hover {
       #border {
@@ -112,6 +108,7 @@
   }
 
   #contact-links {
+    margin: 2rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
