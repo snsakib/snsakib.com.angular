@@ -1,21 +1,36 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+svg {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem auto;
+}
+
 path {
-  fill: transparent;
-  stroke: url("#logo-gradient");
-  stroke-width: 1;
-  stroke-dasharray: 1775.094970703125;
-  stroke-dashoffset: 1775.094970703125;
-  -webkit-animation: drawLine 1s ease-in-out infinite alternate;
-  animation: drawLine 1s ease-in-out infinite alternate;
+  fill: url("#logo-gradient");
+  transform-origin: center;
+  -webkit-animation: pulse 0.3s ease-in-out infinite alternate;
+  animation: pulse 0.3s ease-in-out infinite alternate;
 }
 
 // Line drawing animation rules
-@-webkit-keyframes drawLine {
+@-webkit-keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
   100% {
-    stroke-dashoffset: 0;
+    transform: scale(1);
   }
 }
-@keyframes drawLine {
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+  }
   100% {
-    stroke-dashoffset: 0;
+    transform: scale(1);
   }
 }
