@@ -1,37 +1,16 @@
 <section id="blog">
-  <section id="heading">
+  <div id="heading">
     <p>
-      Though I don't have all the answers, I feel delighted to teach others what
-      I've learned so far.
+      What are you going to learn today?
     </p>
+  </div>
 
-    <!-- <section id="filter">
-      <select name="postFilter" id="postFilter">
-        <option value="default">Filter posts by category</option>
-        <option
-          value="{{ postFilterOption }}"
-          *ngFor="let postFilterOption of postFilterOptions"
-          >{{ postFilterOption }}</option
-        >
-      </select>
-    </section> -->
-  </section>
-
-  <section id="posts">
-    <ul>
-      <li class="post" *ngFor="let post of posts">
-        <a class="post-link" routerLink="/">
-          <h1 class="gradient-text">{{ post.title }}</h1>
-          <p>
-            <span>{{ post.date }}</span>
-            <span>{{ post.timeToRead }} min read</span>
-          </p>
-        </a>
-      </li>
-    </ul>
-
-    <!-- <section id="pagination">
-      Pagination
-    </section> -->
+  <section id="topics">
+    <div class="topic" *ngFor="let topic of topics | keyvalue">
+      <a class="topic-link" routerLink="/blog/posts/{{ topic.key }}">
+        <p class="topic-name gradient-text">{{ topic.key }}</p>
+        <p class="total-posts">{{ topic.value }} Posts</p>
+      </a>
+    </div>
   </section>
 </section>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 // Module for router configuration
 import { RouterModule } from '@angular/router';
@@ -11,11 +12,12 @@ import { BlogComponent } from './blog.component';
   declarations: [BlogComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterModule.forChild([
       {
         path: '',
         component: BlogComponent,
-        data: { animation: 'blogPage' }
+        data: {animation: 'blogComponent'}
       }
     ])
   ]
