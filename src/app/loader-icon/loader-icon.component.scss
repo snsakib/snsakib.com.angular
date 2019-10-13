@@ -4,10 +4,8 @@ path {
   stroke-width: 1;
   stroke-dasharray: 1775.094970703125;
   stroke-dashoffset: 1775.094970703125;
-  -webkit-animation: drawLine 1s ease-in-out alternate,
-    fillIt 1s 1s ease-in-out alternate;
-  animation: drawLine 1s ease-in-out alternate,
-    fillIt 1s 1s ease-in-out alternate;
+  -webkit-animation: drawLine 1s ease-in-out infinite alternate;
+  animation: drawLine 1s ease-in-out infinite alternate;
 }
 
 // Line drawing animation rules
@@ -19,19 +17,5 @@ path {
 @keyframes drawLine {
   100% {
     stroke-dashoffset: 0;
-  }
-}
-
-@-webkit-keyframes fillIt {
-  100% {
-    fill: url("#logo-gradient");
-    stroke: transparent;
-  }
-}
-
-@keyframes fillIt {
-  100% {
-    fill: url("#logo-gradient");
-    stroke: transparent;
   }
 }
