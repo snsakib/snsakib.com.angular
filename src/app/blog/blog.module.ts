@@ -8,8 +8,10 @@ import { RouterModule } from '@angular/router';
 // Components
 import { BlogComponent } from './blog.component';
 
+import { LoaderIconComponent } from '../loader-icon/loader-icon.component';
+
 @NgModule({
-  declarations: [BlogComponent],
+  declarations: [BlogComponent, LoaderIconComponent],
   imports: [
     CommonModule,
     HttpClientModule,

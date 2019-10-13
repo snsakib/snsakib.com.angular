@@ -11,10 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 // Components
 import { AppComponent } from './app.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
-import { LoaderIconComponent } from './loader-icon/loader-icon.component';
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, LoaderIconComponent],
+  declarations: [AppComponent, MainNavComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
