@@ -1,15 +1,16 @@
 <section id="blog">
   <div id="heading">
-    <p>
-      What are you going to learn today?
-    </p>
+    <q>
+      Who are the learned? It is they who practice what they know.
+    </q>
+    <small>Prophet Muhammad (Peace Be Upon Him)</small>
   </div>
 
   <loader-icon *ngIf="!topics"></loader-icon>
   <section *ngIf="topics" id="topics">
     <div class="topic" *ngFor="let topic of topics | keyvalue">
       <a class="topic-link" routerLink="/blog/posts/{{ topic.key }}">
-        <p class="topic-name gradient-text">{{ topic.key }}</p>
+        <p class="topic-name">{{ topic.key }}</p>
         <p class="total-posts">{{ topic.value }} Posts</p>
       </a>
     </div>
