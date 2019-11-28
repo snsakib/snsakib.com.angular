@@ -1,4 +1,5 @@
-<pdf-viewer
+<loader-icon *ngIf="!pdfSrc"></loader-icon>
+<pdf-viewer *ngIf="pdfSrc"
   [src]="pdfSrc"
   [original-size]="false"
   [autoresize]="true"
