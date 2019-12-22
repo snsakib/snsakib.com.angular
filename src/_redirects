@@ -6,7 +6,7 @@
 /case-study/weather-forecast https://project-case-studies.netlify.com/case-studies/weather-forecast.html 200!
 
 # Redirects rules for showing admin panel
-/admin https://snsakib-blog-cms.herokuapp.com 200!
+# /admin https://snsakib-blog-cms.herokuapp.com 200!
 
 # Redirects rules for single page application
 /* /index.html 200
