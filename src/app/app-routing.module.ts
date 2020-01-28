@@ -23,6 +23,7 @@ const routes: Routes = [
     path: 'certificates/:course',
     loadChildren: () => import('./certificates/certificates.module').then(m => m.CertificatesModule)
   },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: '', pathMatch: 'full', redirectTo: 'home' }
 ];
 
