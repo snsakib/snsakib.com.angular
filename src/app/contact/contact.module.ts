@@ -1,23 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-
-// Module for router configuration
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
 // Components
-import { ContactComponent } from './contact.component';
+import { ContactComponent } from "./contact.component";
+import { ContactRoutingModule } from "./contact-routing.module";
 
 @NgModule({
   declarations: [ContactComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: ContactComponent,
-        data: { animation: 'contactPage' }
-      }
-    ])
-  ]
+  imports: [CommonModule, ContactRoutingModule]
 })
 export class ContactModule {}
