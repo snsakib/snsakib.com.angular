@@ -18,18 +18,6 @@ const routes: Routes = [
     path: 'projects',
     loadChildren: () => import('./projects/projects.module').then(m => m.ProjectsModule)
   },
-  {
-    path: 'blog',
-    loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule)
-  },
-  {
-    path: 'blog/posts/:category',
-    loadChildren: () => import('./blog-posts/blog-posts.module').then(m => m.BlogPostsModule)
-  },
-  {
-    path: 'blog/post/:postId',
-    loadChildren: () => import('./blog-post/blog-post.module').then(m => m.BlogPostModule)
-  },
   { path: 'contact', loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule) },
   {
     path: 'certificates/:course',
