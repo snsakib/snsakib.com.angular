@@ -1,9 +1,0 @@
-# Redirects rules for showing project live demos
-# /project/agency https://project-agency.netlify.com/index.html 200!
-
-# Redirects rules for showing project case studies
-/case-study/agency https://project-case-studies.netlify.com/case-studies/agency.html 200!
-/case-study/weather-forecast https://project-case-studies.netlify.com/case-studies/weather-forecast.html 200!
-
-# Redirects rules for single page application
-/* /index.html 200
