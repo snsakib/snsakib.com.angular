@@ -1,52 +1,11 @@
 {
-  "name": "portfolio-website",
+  "name": "snsakib.com",
   "version": "0.0.0",
+  "description": "Portfolio website of Syed Nazmus Sakib <contact@snsakib.com>",
+  "main": "index.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --prod",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "postinstall": "ngcc",
-    "git": "git add --all && git commit -m \"Update about page\" && git push",
-    "stats": "webpack-bundle-analyzer dist/portfolioWebsite/stats.json",
-    "all": "npm run build && npm run git"
+    "sass": "sass --watch assets/styles/scss:assets/styles/css --no-source-map"
   },
-  "private": true,
-  "dependencies": {
-    "@angular-devkit/schematics": "^10.0.5",
-    "@angular/animations": "~10.0.8",
-    "@angular/cdk": "~10.1.2",
-    "@angular/common": "~10.0.8",
-    "@angular/compiler": "~10.0.8",
-    "@angular/core": "~10.0.8",
-    "@angular/forms": "~10.0.8",
-    "@angular/material": "^10.1.2",
-    "@angular/platform-browser": "~10.0.8",
-    "@angular/platform-browser-dynamic": "~10.0.8",
-    "@angular/router": "~10.0.8",
-    "core-js": "^2.5.4",
-    "hammerjs": "^2.0.8",
-    "ng2-pdf-viewer": "^5.2.4",
-    "reset-css": "^4.0.1",
-    "rxjs": "~6.5.4",
-    "tslib": "^2.0.0",
-    "warp.css": "^3.2.2",
-    "zone.js": "~0.10.2"
-  },
-  "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1100.5",
-    "@angular-devkit/build-ng-packagr": "~0.1000.5",
-    "@angular/cli": "^10.0.5",
-    "@angular/compiler-cli": "^10.0.8",
-    "@angular/language-service": "~10.0.8",
-    "@types/node": "^12.11.1",
-    "codelyzer": "^6.0.0",
-    "ng-packagr": "^10.0.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~6.1.0",
-    "typescript": "~3.9.7",
-    "webpack-bundle-analyzer": "^3.3.2"
-  }
+  "author": "Syed Nazmus Sakib <contact@snsakib.com>",
+  "license": "ISC"
 }

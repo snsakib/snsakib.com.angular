@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 10%;
+}
+.skills .skill {
+  --skillsInARow: 3;
+  --marginX: 3rem;
+  margin: 0 var(--marginX) 5rem;
+  width: calc( (100% - (2 * var(--marginX) * var(--skillsInARow))) / var(--skillsInARow) );
+}
+.skills .skill .skill-name {
+  position: relative;
+  padding-bottom: 10px;
+}
+.skills .skill .skill-name::after {
+  content: "";
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+}
+.skills .sub-skill {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
