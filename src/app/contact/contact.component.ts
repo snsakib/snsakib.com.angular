@@ -10,8 +10,8 @@ export class ContactComponent {
     {
       imgPath: '../../assets/images/logo-defs.svg#icon-mail',
       alt: 'mail icon',
-      href: 'mailto:contact@snsakib.com',
-      linkText: 'contact@snsakib.com'
+      href: 'mailto:hello@snsakib.com',
+      linkText: 'hello@snsakib.com'
     },
     {
       imgPath: '../../assets/images/logo-defs.svg#icon-linkedin-square',

@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  email: string = 'contact@snsakib.com';
+  email: string = 'hello@snsakib.com';
   constructor() {}
 }
