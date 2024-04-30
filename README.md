@@ -1,1 +1,1 @@
-This repo contains the codes of my portfolio website. Visit www.snsakib.com for live demo.
+This repo contains the codes of my previous portfolio website. Visit www.snsakib.com for the current portfolio website.
